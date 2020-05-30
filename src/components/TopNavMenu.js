@@ -40,7 +40,7 @@ const useStyles = (theme) => ({
         // marginRight: theme.spacing(2),
       },
       menuList: {
-          backgroundColor: '#F9BD3B'
+          backgroundColor: 'rgba(249, 189, 59, .76)'
       },
 });
 
@@ -63,7 +63,7 @@ const menuData = [
     {
         id: 4,
         text: 'Contact Us',
-        url: '/contactus'
+        url: '/index#findUs'
     }
 ]
 

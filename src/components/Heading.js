@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
-import { makeStyles, withStyles } from '@material-ui/styles';
+import { withStyles } from '@material-ui/styles';
 
 const styles = (theme) => ({
     root: {

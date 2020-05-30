@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
-import Heading from './Heading';
-import { Paper, Grid, Box, Typography } from '@material-ui/core';
+// import Heading from './Heading';
+import { Paper, Grid, Typography } from '@material-ui/core';
 
 const styles = (theme) => ({
     root: {

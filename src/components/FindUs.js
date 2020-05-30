@@ -26,7 +26,7 @@ export default function FindUs() {
     const classes = useStyles();
 
     return (
-    <div className={classes.root}>
+    <div className={classes.root} id="findUs">
         <Grid 
             container
             direction="row"
