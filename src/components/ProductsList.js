@@ -77,18 +77,17 @@ const queryWindowsAndDoors = graphql`
 `;
 
 const getQuery = (productType) => {
-    switch(productType){
-        case "Windows and Doors":
-            return queryWindowsAndDoors;
-        default:
-            return query;
+
+    let queryLocal = query;
+    if(props.productType=='Windows and Doors'){
+        queryLocal = queryWindowsAndDoors;
     }
+
+    return queryLocal;
 }
 
 const CardXListComponent = (props) => {
     const { classes } = props;
-    console.log(props);
-
     return (
         <div className={classes.root}>
             <Heading headerText={props.productType} />
