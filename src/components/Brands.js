@@ -9,7 +9,7 @@ import { graphql, StaticQuery } from "gatsby";
 
 const styles = (theme) => ({
     root: {
-        padding: '2rem 8rem',
+        padding: '1rem 8rem',
         [theme.breakpoints.down('xs')]:{
             padding: '2rem 2rem',
         },

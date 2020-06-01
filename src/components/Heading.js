@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/styles';
 const styles = (theme) => ({
     root: {
         padding: '.5rem 0rem',
+        margin: '.5rem 0rem',
         '&::before': {
             content: '""',
             width: '3rem',

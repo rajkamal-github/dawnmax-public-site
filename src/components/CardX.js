@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
     root: {
         boxShadow: 'none',
-        backgroundColor: 'rgba(249, 189, 59, .76)',
+        backgroundColor: 'rgba(249, 189, 59, .08)',
         borderRadius: 'unset',
       },
       cardActionArea: {
