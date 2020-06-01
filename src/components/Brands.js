@@ -48,10 +48,10 @@ const BrandsComponent = (props) => {
                 justify="space-evenly"
                 alignItems="center"
             >
-                {tileData.map((d) => {
+                {tileData.map((d, index) => {
                         console.log(d);
                         return (
-                                <Grid item xs={12} sm={4}>
+                                <Grid item xs={12} sm={4} key={index}>
                                     <div className={classes.tile}>
                                         <div className={classes.tileImageContainer}>
                                             <a href={d.node.frontmatter.link} target="_blank">
