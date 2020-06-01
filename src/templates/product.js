@@ -13,8 +13,8 @@ const styles = (theme) => ({
         flexDirection: 'column'
     },
     postHeaderImg: {
-        minWidth: '100%',
-        maxHeight: '25vh',
+        // minWidth: '50%',
+        maxHeight: '50vh',
         objectFit: 'cover'
     },
     postHeaderContent:{
@@ -62,7 +62,11 @@ const Product = (props) => {
         <Layout>
             <div className={classes.root}>
                 <div className={classes.postHeader}>
-                    {/* <p><i>Created on {props.data.markdownRemark.frontmatter.date}</i></p> <br></br> */}
+                    <div className={classes.postHeaderContent}>
+                        <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
+                            {props.data.markdownRemark.frontmatter.title}
+                        </Typography>
+                    </div>
                     <div className={classes.postHeaderMedia}>
                         <img 
                             src={props.data.markdownRemark.frontmatter.image.publicURL} 
@@ -70,14 +74,9 @@ const Product = (props) => {
                             className={classes.postHeaderImg}
                         />
                     </div>
-                    <div className={classes.postHeaderContent}>
-                        <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
-                            {props.data.markdownRemark.frontmatter.title}
-                        </Typography>
-                    </div>
                 </div>
                 <div className={classes.postContent} dangerouslySetInnerHTML={{__html : props.data.markdownRemark.html}}>
-
+                    
                 </div>
             </div>
         </Layout>

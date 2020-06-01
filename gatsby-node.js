@@ -43,5 +43,38 @@ module.exports.createPages = async ( {graphql, actions}) => {
             }
         });
     });
-
 }
+
+// module.exports.createPages = async ( {graphql, actions}) => {
+//     const { createPage } = actions
+
+//     const postTemplate = path.resolve('./src/templates/products.js');
+
+//     const res = await graphql(`
+//         query {
+//             allMarkdownRemark(filter: {frontmatter: {productType1: {eq: ""}, productType2: {eq: ""}}}) {
+//                 edges {
+//                     node {
+//                         fields {
+//                             slug
+//                         }
+//                         frontmatter {
+//                             productType1
+//                             productType2
+//                         }
+//                     }
+//                 }
+//             }
+//         }      
+//     `);
+
+//     res.data.allMarkdownRemark.edges.forEach((edge) => {
+//         createPage({
+//             component: postTemplate,
+//             path: `/productsfeatured/${edge.node.fields.slug}`,
+//             context: {
+//                 slug: edge.node.fields.slug
+//             }
+//         });
+//     });
+// }

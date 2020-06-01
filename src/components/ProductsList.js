@@ -8,7 +8,7 @@ import { graphql, StaticQuery } from "gatsby";
 
 const styles = (theme) => ({
     root: {
-        padding: '1rem 8rem',
+        padding: '8rem 8rem',
         [theme.breakpoints.down('xs')]:{
             padding: '0.5rem 2rem',
         },
@@ -19,10 +19,12 @@ const styles = (theme) => ({
       },
 });
 
+let productType1 = 'Windows and Doors';
+
 
 const query = graphql`
     query {
-        allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {eq: "true"}}}) {
+        allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {eq: "false"}, productType1: {eq: ""}, productType2: {eq: ""}}}) {
             edges {
                 node {
                     frontmatter {
@@ -34,10 +36,12 @@ const query = graphql`
                         }
                         link
                         featured
+                        productType1
+                        productType2
                     }
                     fileAbsolutePath
                     fields {
-                      slug
+                        slug
                     }
                 }
             }
@@ -45,23 +49,41 @@ const query = graphql`
     }  
 `;
 
-const tileData = [
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'Windows and Doors',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'Glass Architecture',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'Handrails',
-        author: 'Scott Peck'
+const queryWindowsAndDoors = graphql`
+    query {
+        allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {eq: "false"}, productType1: {eq: "Windows and Doors"}, productType2: {eq: ""}}}) {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        description
+                        date(formatString: "MM/DD/yyyy")
+                        image {
+                        publicURL
+                        }
+                        link
+                        featured
+                        productType1
+                        productType2
+                    }
+                    fileAbsolutePath
+                    fields {
+                        slug
+                    }
+                }
+            }
+        }
+    }  
+`;
+
+const getQuery = (productType) => {
+    switch(productType){
+        case "Windows and Doors":
+            return queryWindowsAndDoors;
+        default:
+            return query;
     }
-];
+}
 
 const CardXListComponent = (props) => {
     const { classes } = props;
@@ -69,11 +91,11 @@ const CardXListComponent = (props) => {
 
     return (
         <div className={classes.root}>
-            <Heading headerText='Featured Products' />
+            <Heading headerText={props.productType} />
             <Grid container spacing={3}>
                 {
                     props.data.allMarkdownRemark.edges.map((edge, index)=> {
-                        const postLink = "/productlist";
+                        const postLink = "/products/" + edge.node.fields.slug;
                         return (
                             <Grid item xs={12} sm={4} key={index}>
                                 <CardX 
@@ -92,13 +114,15 @@ const CardXListComponent = (props) => {
 }
 
 
-const CardXList = (props) => (
-    <StaticQuery
-      query={query}
-      render={data => (
-        <CardXListComponent data={data} {...props}/>
-      )}
-    />
-  ); 
+const CardXList = (props) => {
+    return (
+        <StaticQuery
+            query={getQuery(props.productType)}
+            render={data => (
+                <CardXListComponent data={data} {...props}/>
+            )}
+        />
+    )
+}; 
 
 export default withStyles(styles)(CardXList);
