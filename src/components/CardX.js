@@ -8,17 +8,26 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        // padding: '1rem 5rem',
-        // width: '20vw',
+        boxShadow: 'none',
+        backgroundColor: 'rgba(249, 189, 59, .1)',
+        borderRadius: 'unset'
       },
       media: {
         height: '25vh',
       },
+      typographyHeader: {
+        color: 'rgba(69, 72, 77, 1)',
+        // textTransform: 'uppercase',
+        fontSize: '1rem'
+      },
+      typographyCaption: {
+        color: 'rgba(69, 72, 77, 1)',
+        fontSize: '.9rem'
+      }
 }));
 
 export default function CardX(props) {
     const classes = useStyles();
-    // console.log(props);
 
     return (
         <Card className={classes.root}>
@@ -29,10 +38,10 @@ export default function CardX(props) {
                 title={props.title}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="overline">
+                    <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
                         {props.title}
                     </Typography>
-                    <Typography variant="caption" color="textSecondary" component="p">
+                    <Typography variant="body1" component="p" className={classes.typographyCaption}>
                         Be fearless. Have the courage to take risks. Go where there are no guarantees.
                     </Typography>
                 </CardContent>

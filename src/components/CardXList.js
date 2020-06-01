@@ -25,52 +25,37 @@ const tileData = [
         author: 'Scott Peck'
     },
     {
-        img: 'https://via.placeholder.com/450',
+        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
         title: 'The Road Less Traveled',
         author: 'Scott Peck'
     },
     {
-        img: 'https://via.placeholder.com/450',
+        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
         title: 'The Road Less Traveled',
         author: 'Scott Peck'
     },
     {
-        img: 'https://via.placeholder.com/450',
+        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
         title: 'The Road Less Traveled',
         author: 'Scott Peck'
     },
     {
-        img: 'https://via.placeholder.com/450',
+        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
         title: 'The Road Less Traveled',
         author: 'Scott Peck'
     },
     {
-        img: 'https://via.placeholder.com/450',
+        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
         title: 'The Road Less Traveled',
         author: 'Scott Peck'
     },
     {
-        img: 'https://via.placeholder.com/450',
+        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
         title: 'The Road Less Traveled',
         author: 'Scott Peck'
     },
     {
-        img: 'https://via.placeholder.com/450',
-        title: 'The Road Less Traveled',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://via.placeholder.com/450',
-        title: 'The Road Less Traveled',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://via.placeholder.com/450',
-        title: 'The Road Less Traveled',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://via.placeholder.com/450',
+        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
         title: 'The Road Less Traveled',
         author: 'Scott Peck'
     }
@@ -86,7 +71,7 @@ export default function CardXList() {
                 {
                     tileData.map((element, index)=> {
                         return (
-                            <Grid item xs={12} sm={3} key={index}>
+                            <Grid item xs={12} sm={4} key={index}>
                                 <CardX {...element}/>
                             </Grid>
                         )
