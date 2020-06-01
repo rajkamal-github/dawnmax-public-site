@@ -4,7 +4,7 @@ import CarouselX from '../components/CarouselX';
 // import { Divider } from '@material-ui/core';
 import Brands from '../components/Brands';
 import Highlight from '../components/Highlight';
-import CardXList from '../components/CardXList';
+import FeaturedProducts from '../components/FeaturedProducts';
 import Mission from '../components/Mission';
 
 export default function Index() {
@@ -13,7 +13,7 @@ export default function Index() {
       <CarouselX />
       {/* <Highlight /> */}
       <Brands />
-      <CardXList />
+      <FeaturedProducts />
       <Mission />
     </Layout>
   );
