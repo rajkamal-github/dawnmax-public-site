@@ -13,6 +13,9 @@ module.exports = {
     // If you want to use styled components you should add the plugin here.
     // 'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-transformer-remark`,
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -30,7 +33,14 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`, 
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    },
   ],
   siteMetadata: {
     title: 'Dawnmax',

@@ -24,7 +24,7 @@ const CarouselComponent = (props) => {
     // console.log(props);
  
     return (
-        <Carousel className={classes.root} autoPlay={true} indicators={false} animation="slide" interval="100000">
+        <Carousel className={classes.root} autoPlay={true} indicators={false} animation="slide" interval="10000">
             {
                 props.data.allFile.nodes.map( (element, index) => {
                     return (

@@ -12,21 +12,24 @@ const styles = (theme) => ({
         flexGrow: 1,
         backgroundColor: 'rgba(161, 162, 162, 1)',
     },
-    header:{
-        padding: '1rem 0rem'
-    },
+    // header:{
+    //     padding: '1rem 0rem'
+    // },
     missionStatementPaper: {
         backgroundColor: 'rgba(161, 162, 162, 1)',
-        padding: '2rem',
+        padding: '2rem 0rem',
         color: '#fff',
         boxShadow: 'none',
     },
     missionStatement: {
         // fontWeight: 'bold',
+        [theme.breakpoints.down('xs')]:{
+            fontSize: '2.75rem',
+        },
     },
     missionStatementDetailPaper:{
         backgroundColor: 'rgba(161, 162, 162, 1)',
-        padding: '2rem',
+        padding: '2rem 0rem',
         color: '#fff',
         boxShadow: 'none',
     },

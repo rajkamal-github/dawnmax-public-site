@@ -7,7 +7,7 @@ const styles = (theme) => ({
         padding: '.5rem 0rem',
         '&::before': {
             content: '""',
-            width: '2rem',
+            width: '3rem',
             display: 'block',
             backgroundColor: '#45484D',
             // height: '.15rem',
