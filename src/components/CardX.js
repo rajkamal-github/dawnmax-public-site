@@ -5,12 +5,17 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { Link} from "gatsby"
 
 const useStyles = makeStyles((theme) => ({
     root: {
         boxShadow: 'none',
         backgroundColor: 'rgba(249, 189, 59, .08)',
         borderRadius: 'unset',
+      },
+      cardLink: {
+          padding: '1rem',
+          textDecoration: 'none',
       },
       cardActionArea: {
         // display: 'flex',
@@ -40,8 +45,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CardX(props) {
     const classes = useStyles();
+    console.log(props);
 
     return (
+      <Link to={props.link} className={classes.cardLink} underline='none'>
         <Card className={classes.root}>
             <CardActionArea className={classes.cardActionArea}>
                 <CardMedia
@@ -59,5 +66,6 @@ export default function CardX(props) {
                 </CardContent>
             </CardActionArea>
         </Card>
+      </Link>
     );
 }

@@ -16,7 +16,7 @@ const styles = (theme) => ({
       },
       header:{
           padding: '1rem 0rem'
-      }
+      },
 });
 
 
@@ -25,17 +25,20 @@ const query = graphql`
         allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}}) {
             edges {
                 node {
-                frontmatter {
-                    title
-                    description
-                    date(formatString: "MM/DD/yyyy")
-                    image {
-                    publicURL
+                    frontmatter {
+                        title
+                        description
+                        date(formatString: "MM/DD/yyyy")
+                        image {
+                        publicURL
+                        }
+                        link
+                        featured
                     }
-                    link
-                    featured
-                }
-                fileAbsolutePath
+                    fileAbsolutePath
+                    fields {
+                      slug
+                    }
                 }
             }
         }
@@ -63,17 +66,22 @@ const tileData = [
 const CardXListComponent = (props) => {
     const { classes } = props;
     console.log(props);
-    const tileData = props.data.allMarkdownRemark.edges;
 
     return (
         <div className={classes.root}>
             <Heading headerText='Featured Products' />
             <Grid container spacing={3}>
                 {
-                    tileData.map((element, index)=> {
+                    props.data.allMarkdownRemark.edges.map((edge, index)=> {
+                        const postLink = "/products/" + edge.node.fields.slug;
                         return (
                             <Grid item xs={12} sm={4} key={index}>
-                                <CardX img={element.node.frontmatter.image.publicURL} title={element.node.frontmatter.title} {...element}/>
+                                <CardX 
+                                    img={edge.node.frontmatter.image.publicURL}
+                                    link={postLink}
+                                    title={edge.node.frontmatter.title} 
+                                    {...edge}
+                                />
                             </Grid>
                         )
                     })

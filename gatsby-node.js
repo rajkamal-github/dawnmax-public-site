@@ -15,33 +15,33 @@ module.exports.onCreateNode = ({ node, actions}) => {
     }
 }
 
-// module.exports.createPages = async ( {graphql, actions}) => {
-//     const { createPage } = actions
+module.exports.createPages = async ( {graphql, actions}) => {
+    const { createPage } = actions
 
-//     const postTemplate = path.resolve('./src/templates/post.js');
+    const postTemplate = path.resolve('./src/templates/product.js');
 
-//     const res = await graphql(`
-//         query {
-//             allMarkdownRemark {
-//                 edges {
-//                     node {
-//                         fields {
-//                             slug
-//                         }
-//                     }
-//                 }
-//             }
-//         }      
-//     `);
+    const res = await graphql(`
+        query {
+            allMarkdownRemark {
+                edges {
+                    node {
+                        fields {
+                            slug
+                        }
+                    }
+                }
+            }
+        }      
+    `);
 
-//     res.data.allMarkdownRemark.edges.forEach((edge) => {
-//         createPage({
-//             component: postTemplate,
-//             path: `/blog/${edge.node.fields.slug}`,
-//             context: {
-//                 slug: edge.node.fields.slug
-//             }
-//         });
-//     });
+    res.data.allMarkdownRemark.edges.forEach((edge) => {
+        createPage({
+            component: postTemplate,
+            path: `/products/${edge.node.fields.slug}`,
+            context: {
+                slug: edge.node.fields.slug
+            }
+        });
+    });
 
-// }
+}
