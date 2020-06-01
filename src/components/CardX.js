@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
       },
       typographyHeader: {
         color: 'rgba(69, 72, 77, 1)',
-        // textTransform: 'uppercase',
         fontSize: '1rem',
         alignSelf: 'center',
       },
