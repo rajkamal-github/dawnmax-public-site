@@ -21,42 +21,17 @@ const useStyles = makeStyles((theme) => ({
 const tileData = [
     {
         img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'The Road Less Traveled',
+        title: 'Windows and Doors',
         author: 'Scott Peck'
     },
     {
         img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'The Road Less Traveled',
+        title: 'Glass Architecture',
         author: 'Scott Peck'
     },
     {
         img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'The Road Less Traveled',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'The Road Less Traveled',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'The Road Less Traveled',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'The Road Less Traveled',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'The Road Less Traveled',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'The Road Less Traveled',
+        title: 'Handrails',
         author: 'Scott Peck'
     }
 ];

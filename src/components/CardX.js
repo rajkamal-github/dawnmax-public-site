@@ -9,8 +9,20 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
     root: {
         boxShadow: 'none',
-        backgroundColor: 'rgba(249, 189, 59, .1)',
-        borderRadius: 'unset'
+        backgroundColor: 'rgba(249, 189, 59, .76)',
+        borderRadius: 'unset',
+      },
+      cardActionArea: {
+        // display: 'flex',
+        // flexDirection: 'column'
+      },
+      cardMedia:{
+        height: '25vh',
+      },
+      cardContent: {
+        padding: '1rem .5rem 1rem .5rem',
+        display: 'flex',
+        flexDirection: 'column'
       },
       media: {
         height: '25vh',
@@ -18,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
       typographyHeader: {
         color: 'rgba(69, 72, 77, 1)',
         // textTransform: 'uppercase',
-        fontSize: '1rem'
+        fontSize: '1rem',
+        alignSelf: 'center',
       },
       typographyCaption: {
         color: 'rgba(69, 72, 77, 1)',
@@ -31,19 +44,19 @@ export default function CardX(props) {
 
     return (
         <Card className={classes.root}>
-            <CardActionArea>
+            <CardActionArea className={classes.cardActionArea}>
                 <CardMedia
-                className={classes.media}
-                image={props.img}
-                title={props.title}
+                    className={classes.cardMedia}
+                    image={props.img}
+                    title={props.title}
                 />
-                <CardContent>
+                <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
                         {props.title}
                     </Typography>
-                    <Typography variant="body1" component="p" className={classes.typographyCaption}>
+                    {/* <Typography variant="body1" component="p" className={classes.typographyCaption}>
                         Be fearless. Have the courage to take risks. Go where there are no guarantees.
-                    </Typography>
+                    </Typography> */}
                 </CardContent>
             </CardActionArea>
         </Card>
