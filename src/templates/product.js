@@ -67,13 +67,13 @@ const Product = (props) => {
                             {props.data.markdownRemark.frontmatter.title}
                         </Typography>
                     </div>
-                    <div className={classes.postHeaderMedia}>
+                    {/* <div className={classes.postHeaderMedia}>
                         <img 
                             src={props.data.markdownRemark.frontmatter.image.publicURL} 
                             alt={props.data.markdownRemark.frontmatter.title}
                             className={classes.postHeaderImg}
                         />
-                    </div>
+                    </div> */}
                 </div>
                 <div className={classes.postContent} dangerouslySetInnerHTML={{__html : props.data.markdownRemark.html}}>
                     

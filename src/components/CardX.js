@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
       },
       cardMedia:{
         height: '25vh',
+        backgroundSize: 'contain',
       },
       cardContent: {
         padding: '1rem .5rem 1rem .5rem',
@@ -47,8 +48,31 @@ export default function CardX(props) {
     const classes = useStyles();
     console.log(props);
 
-    return (
-      <Link to={props.link} className={classes.cardLink} underline='none'>
+    if (props.link){
+      return (
+        <Link to={props.link} className={classes.cardLink} underline='none'>
+          <Card className={classes.root}>
+              <CardActionArea className={classes.cardActionArea}>
+                  <CardMedia
+                      className={classes.cardMedia}
+                      image={props.img}
+                      title={props.title}
+                  />
+                  <CardContent className={classes.cardContent}>
+                      <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
+                          {props.title}
+                      </Typography>
+                      {/* <Typography variant="body1" component="p" className={classes.typographyCaption}>
+                          Be fearless. Have the courage to take risks. Go where there are no guarantees.
+                      </Typography> */}
+                  </CardContent>
+              </CardActionArea>
+          </Card>
+        </Link>
+      );
+    }
+    else{
+      return (
         <Card className={classes.root}>
             <CardActionArea className={classes.cardActionArea}>
                 <CardMedia
@@ -66,6 +90,6 @@ export default function CardX(props) {
                 </CardContent>
             </CardActionArea>
         </Card>
-      </Link>
-    );
+      );
+    }
 }

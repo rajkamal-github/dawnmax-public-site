@@ -101,7 +101,7 @@ const CardXListComponent = (props) => {
                             <Grid item xs={12} sm={4} key={index}>
                                 <CardX 
                                     img={edge.node.frontmatter.image.publicURL}
-                                    link={postLink}
+                                    // link={postLink}
                                     title={edge.node.frontmatter.title} 
                                     {...edge}
                                 />
