@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       },
       cardMedia:{
         height: '25vh',
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
       },
       cardContent: {
         padding: '1rem .5rem 1rem .5rem',

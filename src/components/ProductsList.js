@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, withStyles} from '@material-ui/core/styles';
 // import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import CardX from './CardX';
+import CardY from './CardY';
 import Heading from './Heading';
 import { graphql, StaticQuery } from "gatsby";
 
@@ -99,7 +99,7 @@ const CardXListComponent = (props) => {
                         const postLink = "/products/" + edge.node.fields.slug;
                         return (
                             <Grid item xs={12} sm={4} key={index}>
-                                <CardX 
+                                <CardY 
                                     img={edge.node.frontmatter.image.publicURL}
                                     // link={postLink}
                                     title={edge.node.frontmatter.title} 
