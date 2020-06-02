@@ -47,21 +47,21 @@ const useStyles = (theme) => ({
 const menuData = [
     {
         id: 1,
+        text: 'Home',
+        url: '/'
+    },
+    {
+        id: 2,
         text: 'About',
         url: '/about'
     },
     {
-        id: 2,
+        id: 3,
         text: 'Products',
         url: '/products'
     },
     {
-        id: 3,
-        text: 'Where to buy?',
-        url: '/wheretobuy'
-    },
-    {
-        id: 4,
+        id: 5,
         text: 'Contact Us',
         url: '/index#findUs'
     }

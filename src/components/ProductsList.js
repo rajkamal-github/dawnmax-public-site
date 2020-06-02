@@ -88,6 +88,8 @@ const getQuery = (productType) => {
 
 const CardXListComponent = (props) => {
     const { classes } = props;
+    console.log('CardXListComponent');
+    console.log(props);
     return (
         <div className={classes.root}>
             <Heading headerText={props.productType} />
@@ -114,9 +116,16 @@ const CardXListComponent = (props) => {
 
 
 const CardXList = (props) => {
+
+    let queryLocal = query;
+    if (props!=null && props.productType !=null && props.productType == 'Windows and Doors'){
+        console.log('Condition worked');
+        queryLocal = queryWindowsAndDoors;
+    }
+
     return (
         <StaticQuery
-            query={getQuery(props.productType)}
+            query={queryWindowsAndDoors}
             render={data => (
                 <CardXListComponent data={data} {...props}/>
             )}
