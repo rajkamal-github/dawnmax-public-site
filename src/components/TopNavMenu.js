@@ -7,6 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { withStyles } from '@material-ui/styles';
 import { Popper } from '@material-ui/core';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import { Link} from "gatsby";
 
 const useStyles = (theme) => ({
     root: {
@@ -25,7 +26,7 @@ const useStyles = (theme) => ({
         // background: 'transparent',
         // border: 'none',
         color: '#45484D',
-        // boxShadow: 'none'
+        // boxShadow: 'none',
       },
       buttonHover:{
           backgroundColor: '#45484D',
@@ -35,6 +36,10 @@ const useStyles = (theme) => ({
         [theme.breakpoints.up('sm')]:{
             display: 'none'    
         }
+      },
+      menuLink: {
+        textDecoration: 'none',
+        color: '#45484D',
       },
       menuButton: {
         // marginRight: theme.spacing(2),
@@ -53,17 +58,17 @@ const menuData = [
     {
         id: 2,
         text: 'About',
-        url: '/about'
+        url: '/'
     },
     {
         id: 3,
         text: 'Products',
-        url: '/products'
+        url: '/productlist'
     },
     {
         id: 5,
         text: 'Contact Us',
-        url: '/index#findUs'
+        url: '/#findUs'
     }
 ]
 
@@ -80,7 +85,8 @@ const TopNavMenu = (props) => {
 
     const handleMenuItemClose = value => e => {
         e.preventDefault();
-        console.log(value);
+        // console.log(value);
+        // window.location.href = value;
         setAnchorEl(false);
     }
 
@@ -94,9 +100,15 @@ const TopNavMenu = (props) => {
             <div className={props.classes.navButtonBar}>
                 {
                     menuData.map(x => (
-                        <Button key={x.id} onClick={handleMenuItemClose(x.url)} color="primary" className={props.classes.button}>
-                            {x.text}
-                        </Button>
+                        <Link to={x.url} className={props.classes.menuLink}>
+                            <Button key={x.id} 
+                                // onClick={handleMenuItemClose(x.url)} 
+                                color="primary" 
+                                className={props.classes.button}
+                            >
+                                {x.text}
+                            </Button>
+                        </Link>
                     ))
                 }
             </div>
@@ -113,7 +125,14 @@ const TopNavMenu = (props) => {
                         <MenuList autoFocusItem={open} id="menu-list-grow" className={props.classes.menuList}>
                             {
                                 menuData.map(x => (
-                                    <MenuItem key={x.id} onClick={handleMenuItemClose(x.url)} url={x.url}>{x.text}</MenuItem>
+                                    <Link to={x.url} className={props.classes.menuLink}>
+                                        <MenuItem key={x.id} 
+                                            // onClick={handleMenuItemClose(x.url)} 
+                                            url={x.url}
+                                        >
+                                            {x.text}
+                                        </MenuItem>
+                                    </Link>
                                 ))
                             }
                         </MenuList>
