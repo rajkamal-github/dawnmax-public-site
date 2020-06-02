@@ -79,7 +79,7 @@ const queryWindowsAndDoors = graphql`
 const getQuery = (productType) => {
 
     let queryLocal = query;
-    if(props.productType=='Windows and Doors'){
+    if (productType == 'Windows and Doors'){
         queryLocal = queryWindowsAndDoors;
     }
 
