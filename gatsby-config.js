@@ -1,4 +1,16 @@
+const urljoin = require("url-join")
+const siteConfig = require("./siteConfig")
+
 module.exports = {
+  siteMetadata: {
+    title: siteConfig.name,
+    author: siteConfig.author,
+    description: siteConfig.description,
+    siteUrl: urljoin(siteConfig.url, siteConfig.prefix),
+    social: {
+      twitter: siteConfig.twitter,
+    },
+  },
   plugins: [
     'gatsby-plugin-top-layout',
     {
@@ -65,8 +77,15 @@ module.exports = {
         defaultQuality: 75,
       },
     },
+    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/web/dawnmax-icon.png`,
+      },
+    },
   ],
-  siteMetadata: {
-    title: 'Dawnmax',
-  },
 };
