@@ -1,10 +1,10 @@
 import React from 'react';
-import { makeStyles, withStyles} from '@material-ui/core/styles';
-// import Typography from '@material-ui/core/Typography';
+import { withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import CardX from './CardX';
 import Heading from './Heading';
 import { graphql, StaticQuery } from "gatsby";
+import { getSearchParams } from "gatsby-query-params";
 
 const styles = (theme) => ({
     root: {
@@ -48,24 +48,27 @@ const query = graphql`
 `;
 
 const getQueryParams = () => {
-    let query = decodeURI(window.location.search);
     let params = [];
-    if(query && query.length > 0){
-        if(query.split('?').length > 1){
-            let searchQuery = query.split('?')[1];
-            if(searchQuery.split('&').length > 0){
-                let paramList = searchQuery.split('&');
 
-                if (paramList.length > 0){
-                    paramList.map((e) => {
-                        if (e.split('=').length > 1){
-                            let param = {
-                                key: e.split('=')[0],
-                                value: e.split('=')[1]
+    if (typeof window !== 'undefined' && typeof window.location !== 'undefined'){
+        let query = decodeURI(window.location.search);
+        if(query && query.length > 0){
+            if(query.split('?').length > 1){
+                let searchQuery = query.split('?')[1];
+                if(searchQuery.split('&').length > 0){
+                    let paramList = searchQuery.split('&');
+    
+                    if (paramList.length > 0){
+                        paramList.forEach((e) => {
+                            if (e.split('=').length > 1){
+                                let param = {
+                                    key: e.split('=')[0],
+                                    value: e.split('=')[1]
+                                }
+                                params.push(param);
                             }
-                            params.push(param);
-                        }
-                    });
+                        });
+                    }
                 }
             }
         }
@@ -80,7 +83,7 @@ const selectQueryParamValue = (key) => {
     let filter1 = params.filter(x => x.key === key);
     if (filter1 && filter1.length > 0){
         if (filter1.some(x => x.key && x.value)){
-            filter1.map(x => {
+            filter1.forEach(x => {
                 if (x.value){
                     val = x.value;
                 }
@@ -92,16 +95,15 @@ const selectQueryParamValue = (key) => {
 };
 
 const CardXListComponent = (props) => {
-    const { classes } = props;
+    const { classes } = props; 
+    const searchParams = getSearchParams();    
     let filter = selectQueryParamValue('productType1')
 
     let pageTitle = 'All Products';
     if (filter && filter.length > 0){
         pageTitle = filter;
     }
-
-
-    // let edges = massageData(props.data.allMarkdownRemark.edges);
+    
     let edges = props.data.allMarkdownRemark.edges.filter(x => x.node.frontmatter.productType1===filter);
 
     return (

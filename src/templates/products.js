@@ -50,7 +50,7 @@ query ($slug: String! ) {
 
 const CardXListComponent = (props) => {
     const { classes } = props;
-    console.log(props);
+    // console.log(props);
 
     return (
       <Layout>

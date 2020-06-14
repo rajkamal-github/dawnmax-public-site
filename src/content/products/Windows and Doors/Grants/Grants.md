@@ -9,7 +9,4 @@ featured: "false"
 description: "Recognized as the leading brand for global housing and building material industry in Japan, TOSTEM provides a comprehensive range of solutions to ensure comfortable homes for everybody through advanced technologies. We do so by drawing on over a half-century of experience and expertise in developing innovative technology that anticipates not only the needs for all here and now, but also the needs for home living tomorrow."
 ---
 
-GRANTS is the flagship product series for TOSTEM. The innovative design results in a large surface area of glass for panoramic view. Taking the standard of aluminium windows and doors to another level. The sliding door is a key product of the GRANTS series with concealed panels to reveal 10% more glass area and reputed smooth operation
-
-## Sliding Door (6 Panels on 3 Tracks)
-![Sliding Door (6 Panels on 3 Tracks)](./grants-sliding-door-6-panels-on-3-tracks.png)
+GRANTS is the flagship product series for TOSTEM. The innovative design results in a large surface area of glass for panoramic view. Taking the standard of aluminium windows and doors to another level. The sliding door is a key product of the GRANTS series with concealed panels to reveal 10% more glass area and reputed smooth operation.

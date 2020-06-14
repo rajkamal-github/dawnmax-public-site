@@ -83,12 +83,12 @@ const TopNavMenu = (props) => {
         setAnchorEl(anchorEl ? null : e.currentTarget);
     }
 
-    const handleMenuItemClose = value => e => {
-        e.preventDefault();
-        // console.log(value);
-        // window.location.href = value;
-        setAnchorEl(false);
-    }
+    // const handleMenuItemClose = value => e => {
+    //     e.preventDefault();
+    //     // console.log(value);
+    //     // window.location.href = value;
+    //     setAnchorEl(false);
+    // }
 
     const handleMenuItemClickAway = e => {
         e.preventDefault();
@@ -99,8 +99,8 @@ const TopNavMenu = (props) => {
         <div>
             <div className={props.classes.navButtonBar}>
                 {
-                    menuData.map(x => (
-                        <Link to={x.url} className={props.classes.menuLink}>
+                    menuData.map( (x, index) => (
+                        <Link key={index} to={x.url} className={props.classes.menuLink}>
                             <Button key={x.id} 
                                 // onClick={handleMenuItemClose(x.url)} 
                                 color="primary" 
@@ -124,8 +124,8 @@ const TopNavMenu = (props) => {
                     <ClickAwayListener onClickAway={handleMenuItemClickAway}>
                         <MenuList autoFocusItem={open} id="menu-list-grow" className={props.classes.menuList}>
                             {
-                                menuData.map(x => (
-                                    <Link to={x.url} className={props.classes.menuLink}>
+                                menuData.map( (x, index) => (
+                                    <Link key={index} to={x.url} className={props.classes.menuLink}>
                                         <MenuItem key={x.id} 
                                             // onClick={handleMenuItemClose(x.url)} 
                                             url={x.url}

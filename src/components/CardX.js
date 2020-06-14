@@ -10,7 +10,7 @@ import { Link} from "gatsby";
 const useStyles = makeStyles((theme) => ({
     root: {
         boxShadow: 'none',
-        backgroundColor: 'rgba(249, 189, 59, .76)',
+        backgroundColor: 'rgba(249, 189, 59, .08)',
         borderRadius: 'unset',
       },
       cardLink: {
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CardX(props) {
     const classes = useStyles();
-    console.log(props);
+    // console.log(props);
 
     if (props.link){
       return (

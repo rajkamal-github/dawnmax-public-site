@@ -2,9 +2,6 @@ import React from 'react';
 import Heading from './Heading';
 import { withStyles } from '@material-ui/styles';
 import {Grid } from '@material-ui/core';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
 import { graphql, StaticQuery } from "gatsby";
 
 const styles = (theme) => ({
@@ -36,7 +33,7 @@ const styles = (theme) => ({
 
 const BrandsComponent = (props) => {
     const { classes } = props;
-    console.log(props);
+    // console.log(props);
     const tileData = props.data.allMarkdownRemark.edges;
 
     return (
