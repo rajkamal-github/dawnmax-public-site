@@ -1,7 +1,7 @@
 ---
 title: "WE Plus"
 date: "2020-06-01"
-image: "../../../images/products/WE-Plus.png"
+image: "../../../../images/products/WE-Plus.png"
 keywords: "Windows and Doors, WE Plus"
 productType1: "Windows and Doors"
 productType2: ""

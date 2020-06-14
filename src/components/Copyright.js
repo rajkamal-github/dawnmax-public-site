@@ -4,7 +4,7 @@ import MuiLink from '@material-ui/core/Link';
 
 export default function Copyright() {
   return (
-    <Typography variant="subtitle2" color="inherit">
+    <Typography variant="body2" color="inherit">
       {'Copyright © '}
       <MuiLink color="inherit" href="https://material-ui.com/">
         Dawnmax Pvt. Ltd.

@@ -15,7 +15,7 @@ const useStyles = (theme) => ({
         // width: '20vw',
       },
       navButtonBar: {
-        [theme.breakpoints.down('xs')]:{
+        [theme.breakpoints.down('sm')]:{
             display: 'none'    
         }
       },
@@ -33,7 +33,7 @@ const useStyles = (theme) => ({
           color: '#fff'
       },
       hamburgerMenu:{
-        [theme.breakpoints.up('sm')]:{
+        [theme.breakpoints.up('md')]:{
             display: 'none'    
         }
       },

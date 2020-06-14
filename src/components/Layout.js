@@ -22,7 +22,7 @@ const Layout = (props) => {
                 {props.children}
             </Main>
             <FindUs />
-            <Divider light />
+            <Divider />
             <BottomNav />
         </div>
     )

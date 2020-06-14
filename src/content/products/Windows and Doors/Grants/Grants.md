@@ -1,7 +1,7 @@
 ---
 title: "Grants"
 date: "2020-06-01"
-image: "../../../images/products/grants.png"
+image: "../../../../images/products/grants.png"
 keywords: "Windows and Doors, Grants"
 productType1: "Windows and Doors"
 productType2: ""

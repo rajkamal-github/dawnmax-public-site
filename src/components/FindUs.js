@@ -6,7 +6,7 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '4rem 8rem',
-        [theme.breakpoints.down('xs')]:{
+        [theme.breakpoints.down('sm')]:{
             padding: '1rem 2rem',
         },
         backgroundColor: 'rgba(249, 189, 59, .76)',

@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         padding: '.5rem 8rem',
-        [theme.breakpoints.down('xs')]:{
+        [theme.breakpoints.down('sm')]:{
             padding: '.5rem 2rem',
         },
         backgroundColor: 'rgba(249, 189, 59, .76)',
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     },
     socialIcons: {
         justifyContent: 'flex-end',
-        [theme.breakpoints.down('xs')]:{
+        [theme.breakpoints.down('sm')]:{
             justifyContent: 'center',
         },
     }

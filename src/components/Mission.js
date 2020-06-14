@@ -6,7 +6,7 @@ import { Paper, Grid, Typography } from '@material-ui/core';
 const styles = (theme) => ({
     root: {
         padding: '8rem 8rem',
-        [theme.breakpoints.down('xs')]:{
+        [theme.breakpoints.down('sm')]:{
             padding: '0.25rem 2rem',
         },
         flexGrow: 1,
@@ -23,7 +23,7 @@ const styles = (theme) => ({
     },
     missionStatement: {
         // fontWeight: 'bold',
-        [theme.breakpoints.down('xs')]:{
+        [theme.breakpoints.down('sm')]:{
             fontSize: '2.75rem',
         },
     },
@@ -49,14 +49,14 @@ const Mission = (props) => {
                 justify="space-evenly"
                 alignItems="center"
             >
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12} md={6}>
                     <Paper className={classes.missionStatementPaper}>
                         <Typography variant="h2" gutterBottom className={classes.missionStatement}>
                             Our Mission is to achieve <strong>MAXimum Excellence</strong> in serving our customers.
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12} md={6}>
                     <Paper className={classes.missionStatementDetailPaper}>
                         <Typography variant="h6" gutterBottom className={classes.missionStatementDetail}>
                             We strive to achieve MAXimum excellence in helping our customers to choose the right building materials to make their vision come true. We help our customers to determine the best brand that has <strong>state of the art design, excellent quality, pre-engineered</strong> which makes the site work simple and low skilled to construct.

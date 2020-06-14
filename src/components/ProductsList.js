@@ -9,8 +9,8 @@ import { graphql, StaticQuery } from "gatsby";
 const styles = (theme) => ({
     root: {
         padding: '8rem 8rem',
-        [theme.breakpoints.down('xs')]:{
-            padding: '4rem 2rem',
+        [theme.breakpoints.down('sm')]:{
+            padding: '8rem 2rem',
         },
         flexGrow: 1,
       },
@@ -119,7 +119,7 @@ const CardXListComponent = (props) => {
                         if (edge.node.frontmatter['image'])
                         {
                             return (
-                                <Grid item xs={12} sm={4} key={index}>
+                                <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
                                     <CardX 
                                         img={edge.node.frontmatter.image.publicURL}
                                         link={postLink}
@@ -131,7 +131,7 @@ const CardXListComponent = (props) => {
                         }
                         else{
                             return (
-                                <Grid item xs={12} sm={4} key={index}>
+                                <Grid item xs={12} sm={6} md={6} lg={4} key={index}>
                                     <CardX 
                                         // img={edge.node.frontmatter.image.publicURL}
                                         link={postLink}

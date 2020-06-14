@@ -17,10 +17,10 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
       backgroundColor: 'rgba(249, 189, 59, .76)',
       color: '#45484D',
-      padding: '.5rem 8rem',
-      [theme.breakpoints.down('xs')]:{
-          padding: '0.25rem .5rem',
-      },
+      padding: '.5rem .5rem',
+      // [theme.breakpoints.down('sm')]:{
+      //     padding: '0.25rem .5rem',
+      // },
   }
 }));
 
