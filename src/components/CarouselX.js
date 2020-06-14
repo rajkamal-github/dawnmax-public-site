@@ -32,7 +32,7 @@ const CarouselComponent = (props) => {
                             <CardActionArea>
                                 <CardMedia
                                 className={classes.media}
-                                image={element.publicURL}
+                                image={element.childImageSharp.fluid.originalImg}
                                 title="Contemplative Reptile"
                                 />
                             </CardActionArea>
@@ -59,6 +59,11 @@ const logoQuery = graphql`
           name
           relativeDirectory
           dir
+          childImageSharp {
+            fluid {
+              originalImg
+            }
+          }
         }
       }
     }

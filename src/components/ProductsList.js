@@ -31,6 +31,11 @@ const query = graphql`
                   date(formatString: "MM/DD/yyyy")
                   image {
                     publicURL
+                    childImageSharp {
+                        fluid {
+                          src
+                        }
+                      }
                   }
                   link
                   featured
@@ -125,7 +130,7 @@ const CardXListComponent = (props) => {
                             return (
                                 <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
                                     <CardX 
-                                        img={edge.node.frontmatter.image.publicURL}
+                                        img={edge.node.frontmatter.image.childImageSharp.fluid.src}
                                         link={postLink}
                                         title={edge.node.frontmatter.title} 
                                         {...edge}
