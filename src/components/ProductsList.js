@@ -115,7 +115,9 @@ const CardXListComponent = (props) => {
                         let postLink = "/products/" + edge.node.fields.slug;
                         // const link = '';
                         if (edge.node.frontmatter.productType1===''){
-                            postLink = window.location.pathname + '?productType1='+edge.node.frontmatter.title;
+                            if(typeof window !== 'undefined' && typeof window.location !== 'undefined'){
+                                postLink = window.location.pathname + '?productType1='+edge.node.frontmatter.title;
+                            }
                         }
 
                         if (edge.node.frontmatter['image'])
