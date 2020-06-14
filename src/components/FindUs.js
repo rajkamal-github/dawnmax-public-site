@@ -17,7 +17,11 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    header: {
+        textTransform: 'uppercase',
+    },
     subtitle2: {
+        fontWeight: 'normal',
         textTransform: 'uppercase'
     }
 }));
@@ -34,7 +38,7 @@ export default function FindUs() {
             alignItems="center"
             spacing={3}>
             <Grid item xs={12} sm={6}>
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" className={classes.header} gutterBottom>
                     Find Us
                 </Typography>
                 <Typography variant="subtitle2" className={classes.subtitle2}>
@@ -53,10 +57,10 @@ export default function FindUs() {
                     Tamil Nadu, India 600042
                 </Typography>
                 <Typography variant="subtitle2" className={classes.subtitle2}>
-                    Contact No. : <strong>+91 98405 44899</strong>
+                    Contact No: <strong>+91 98405 44899</strong>
                 </Typography>
                 <Typography variant="subtitle2">
-                    www.dawnmax.in
+                    <a href="https://dawnmax.in">www.dawnmax.in</a>
                 </Typography>
                 <br />
                 <br />
@@ -64,7 +68,7 @@ export default function FindUs() {
                     <strong>Open Monday to Saturday</strong>
                 </Typography>
                 <Typography variant="body2">
-                    From 10.00 AM to 06.30 PM or
+                    From 10:00 AM to 6:30 PM or
                 </Typography>
                 <Typography variant="body2">
                     talk to an expert <strong>+91 98405 44899</strong>

@@ -22,16 +22,13 @@ const useStyles = makeStyles((theme) => ({
         // flexDirection: 'column'
       },
       cardMedia:{
-        height: '25vh',
+        height: '35vh',
         backgroundSize: 'cover',
       },
       cardContent: {
         padding: '1rem .5rem 1rem .5rem',
         display: 'flex',
         flexDirection: 'column'
-      },
-      media: {
-        height: '25vh',
       },
       typographyHeader: {
         color: 'rgba(69, 72, 77, 1)',

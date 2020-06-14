@@ -8,7 +8,7 @@ import { graphql, StaticQuery } from "gatsby";
 
 const styles = (theme) => ({
     root: {
-        padding: '1rem 8rem',
+        padding: '8rem 8rem',
         [theme.breakpoints.down('xs')]:{
             padding: '0.5rem 2rem',
         },
@@ -73,7 +73,7 @@ const CardXListComponent = (props) => {
             <Grid container spacing={3}>
                 {
                     props.data.allMarkdownRemark.edges.map((edge, index)=> {
-                        const postLink = "/productlist";
+                        const postLink = "/productlist-"+ edge.node.frontmatter.title;
                         return (
                             <Grid item xs={12} sm={4} key={index}>
                                 <CardX 

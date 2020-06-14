@@ -81,7 +81,7 @@ const BrandsComponent = (props) => {
 
 const query = graphql`
     query MyQuery {
-        allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/brands/"}}) {
+        allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/brands/"}}) {
         edges {
             node {
             frontmatter {

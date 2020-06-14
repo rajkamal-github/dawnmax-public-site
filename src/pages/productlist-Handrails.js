@@ -6,15 +6,12 @@ import Brands from '../components/Brands';
 import Highlight from '../components/Highlight';
 import FeaturedProducts from '../components/FeaturedProducts';
 import Mission from '../components/Mission';
+import ProductsList from '../components/ProductsList';
 
 export default function Index() {
   return (
     <Layout>
-      <CarouselX />
-      {/* <Highlight /> */}
-      <Brands />
-      {/* <FeaturedProducts /> */}
-      <Mission />
+      <ProductsList productType='Handrails'/>
     </Layout>
   );
 }

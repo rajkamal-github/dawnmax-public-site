@@ -59,7 +59,7 @@ const Mission = (props) => {
                 <Grid item xs={12} sm={6}>
                     <Paper className={classes.missionStatementDetailPaper}>
                         <Typography variant="h6" gutterBottom className={classes.missionStatementDetail}>
-                            We strive to achieve MAXimum excellence in serving our customers to help them choose the right construction materials and to bring their vision come true. We help our customers to choose the best brand that have state of the art design, excellent quality, pre-engineered which makes the site work easy and low skilled to assemble.
+                            We strive to achieve MAXimum excellence in helping our customers to choose the right building materials to make their vision come true. We help our customers to determine the best brand that has <strong>state of the art design, excellent quality, pre-engineered</strong> which makes the site work simple and low skilled to construct.
                         </Typography>
                     </Paper>
                 </Grid>

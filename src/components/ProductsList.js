@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, withStyles} from '@material-ui/core/styles';
 // import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import CardY from './CardY';
+import CardX from './CardX';
 import Heading from './Heading';
 import { graphql, StaticQuery } from "gatsby";
 
@@ -19,94 +19,128 @@ const styles = (theme) => ({
       },
 });
 
-let productType1 = 'Windows and Doors';
-
 
 const query = graphql`
     query {
-        allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {eq: "false"}, productType1: {eq: ""}, productType2: {eq: ""}}}) {
+        allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {}, productType1: {}, productType2: {}}}) {
             edges {
-                node {
-                    frontmatter {
-                        title
-                        description
-                        date(formatString: "MM/DD/yyyy")
-                        image {
-                        publicURL
+              node {
+                frontmatter {
+                  title
+                  description
+                  date(formatString: "MM/DD/yyyy")
+                  image {
+                    publicURL
+                  }
+                  link
+                  featured
+                  productType1
+                  productType2
+                }
+                fileAbsolutePath
+                fields {
+                  slug
+                }
+              }
+            }
+          }
+        }  
+`;
+
+const getQueryParams = () => {
+    let query = decodeURI(window.location.search);
+    let params = [];
+    if(query && query.length > 0){
+        if(query.split('?').length > 1){
+            let searchQuery = query.split('?')[1];
+            if(searchQuery.split('&').length > 0){
+                let paramList = searchQuery.split('&');
+
+                if (paramList.length > 0){
+                    paramList.map((e) => {
+                        if (e.split('=').length > 1){
+                            let param = {
+                                key: e.split('=')[0],
+                                value: e.split('=')[1]
+                            }
+                            params.push(param);
                         }
-                        link
-                        featured
-                        productType1
-                        productType2
-                    }
-                    fileAbsolutePath
-                    fields {
-                        slug
-                    }
+                    });
                 }
             }
         }
-    }  
-`;
-
-const queryWindowsAndDoors = graphql`
-    query {
-        allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {eq: "false"}, productType1: {eq: "Windows and Doors"}, productType2: {eq: ""}}}) {
-            edges {
-                node {
-                    frontmatter {
-                        title
-                        description
-                        date(formatString: "MM/DD/yyyy")
-                        image {
-                        publicURL
-                        }
-                        link
-                        featured
-                        productType1
-                        productType2
-                    }
-                    fileAbsolutePath
-                    fields {
-                        slug
-                    }
-                }
-            }
-        }
-    }  
-`;
-
-const getQuery = (productType) => {
-
-    let queryLocal = query;
-    if (productType == 'Windows and Doors'){
-        queryLocal = queryWindowsAndDoors;
     }
 
-    return queryLocal;
+    return params;
 }
+
+const selectQueryParamValue = (key) => {
+    let params = getQueryParams();
+    let val = '';
+    let filter1 = params.filter(x => x.key === key);
+    if (filter1 && filter1.length > 0){
+        if (filter1.some(x => x.key && x.value)){
+            filter1.map(x => {
+                if (x.value){
+                    val = x.value;
+                }
+            });
+        }
+    }
+
+    return val;
+};
 
 const CardXListComponent = (props) => {
     const { classes } = props;
-    console.log('CardXListComponent');
-    console.log(props);
+    let filter = selectQueryParamValue('productType1')
+
+    let pageTitle = 'All Products';
+    if (filter && filter.length > 0){
+        pageTitle = filter;
+    }
+
+
+    // let edges = massageData(props.data.allMarkdownRemark.edges);
+    let edges = props.data.allMarkdownRemark.edges.filter(x => x.node.frontmatter.productType1===filter);
+
     return (
         <div className={classes.root}>
-            <Heading headerText={props.productType} />
+            <Heading headerText={pageTitle} />
             <Grid container spacing={3}>
                 {
-                    props.data.allMarkdownRemark.edges.map((edge, index)=> {
-                        const postLink = "/products/" + edge.node.fields.slug;
-                        return (
-                            <Grid item xs={12} sm={4} key={index}>
-                                <CardY 
-                                    img={edge.node.frontmatter.image.publicURL}
-                                    // link={postLink}
-                                    title={edge.node.frontmatter.title} 
-                                    {...edge}
-                                />
-                            </Grid>
-                        )
+                    edges.map((edge, index)=> {
+                        let postLink = "/products/" + edge.node.fields.slug;
+                        // const link = '';
+                        if (edge.node.frontmatter.productType1===''){
+                            postLink = window.location.pathname + '?productType1='+edge.node.frontmatter.title;
+                        }
+
+                        if (edge.node.frontmatter['image'])
+                        {
+                            return (
+                                <Grid item xs={12} sm={4} key={index}>
+                                    <CardX 
+                                        img={edge.node.frontmatter.image.publicURL}
+                                        link={postLink}
+                                        title={edge.node.frontmatter.title} 
+                                        {...edge}
+                                    />
+                                </Grid>
+                            )
+                        }
+                        else{
+                            return (
+                                <Grid item xs={12} sm={4} key={index}>
+                                    <CardX 
+                                        // img={edge.node.frontmatter.image.publicURL}
+                                        link={postLink}
+                                        title={edge.node.frontmatter.title} 
+                                        {...edge}
+                                    />
+                                </Grid>
+                            )
+                        }
                     })
                 }
             </Grid>
@@ -114,19 +148,15 @@ const CardXListComponent = (props) => {
     );
 }
 
-
 const CardXList = (props) => {
-
-    let queryLocal = query;
-    if (props!=null && props.productType !=null && props.productType == 'Windows and Doors'){
-        console.log('Condition worked');
-        queryLocal = queryWindowsAndDoors;
-    }
+    console.log('CardXList');
+    console.log(props);
 
     return (
         <StaticQuery
-            query={queryWindowsAndDoors}
+            query={query}
             render={data => (
+                // data = data.allMarkdownRemark.edges.filter(x => x.))
                 <CardXListComponent data={data} {...props}/>
             )}
         />
