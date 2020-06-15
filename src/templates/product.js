@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Heading from "../components/Heading";
 
 const styles = (theme) => ({
     root: {
@@ -66,9 +67,10 @@ const Product = (props) => {
             <div className={classes.root}>
                 <div className={classes.postHeader}>
                     <div className={classes.postHeaderContent}>
-                        <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
+                        <Heading headerText={props.data.markdownRemark.frontmatter.title}></Heading>
+                        {/* <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
                             {props.data.markdownRemark.frontmatter.title}
-                        </Typography>
+                        </Typography> */}
                     </div>
                     {/* <div className={classes.postHeaderMedia}>
                         <img 

@@ -16,7 +16,7 @@ const styles = (theme) => ({
       },
       header:{
           padding: '1rem 0rem'
-      },
+      }
 });
 
 

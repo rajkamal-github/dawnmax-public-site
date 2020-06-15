@@ -5,14 +5,17 @@ import { Box, Paper, makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     main: {
       minHeight: '100vh',
-      padding: '0rem 0rem',
+      padding: '8rem 8rem',
+      [theme.breakpoints.down('xs')]:{
+          padding: '6rem 2rem',
+      },
     },
     container: {
         padding: "0rem 0rem"
     }
 }));
 
-const Main = (props) => {
+const Main2 = (props) => {
     const classes = useStyles();
 
     return (
@@ -30,4 +33,4 @@ const Main = (props) => {
     )
 }
 
-export default Main;
+export default Main2;
