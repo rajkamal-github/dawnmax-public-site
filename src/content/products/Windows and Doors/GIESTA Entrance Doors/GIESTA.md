@@ -25,8 +25,3 @@ High quality wood-pattern or metallic finish-doors equipped with user-friendly h
 #### Entrance Door - P03
 
 ![Entrance Door - P03](entrance-door-p03.png)
-
-
-
-For more information about "Giesta In / Out Swing", please check the link below.
-https://www.tostemthailand.com/product_category/giesta-out-swing/
