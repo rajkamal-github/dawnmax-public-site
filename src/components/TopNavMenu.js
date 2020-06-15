@@ -57,13 +57,13 @@ const menuData = [
     },
     {
         id: 2,
-        text: 'About',
-        url: '/about'
+        text: 'Products',
+        url: '/productlist'
     },
     {
         id: 3,
-        text: 'Products',
-        url: '/productlist'
+        text: 'About',
+        url: '/about'
     },
     {
         id: 5,

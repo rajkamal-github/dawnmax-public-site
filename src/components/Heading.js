@@ -18,7 +18,7 @@ const styles = (theme) => ({
     header: {
         color: '#45484D',
         textTransform: 'uppercase',
-        fontSize: '1.2rem',
+        fontSize: '1.4rem',
         fontWeight: 'bold',
         margin: '.5rem 0rem',
     }
