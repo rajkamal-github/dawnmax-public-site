@@ -5,6 +5,7 @@ import { CssBaseline, makeStyles } from '@material-ui/core';
 import Main from './Main';
 import FindUs from './FindUs';
 import Divider from '@material-ui/core/Divider';
+import SEO from '../components/seo';
 
 const useStyles = makeStyles((theme) => ({
     root: {

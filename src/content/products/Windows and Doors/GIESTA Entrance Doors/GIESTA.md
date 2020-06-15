@@ -1,11 +1,12 @@
 ---
-title: "GIESTA IN / OUT SWING"
+title: "GIESTA Entrance Doors"
 date: "2020-06-01"
-image: "../../../../images/products/giesta-banner.jpg"
+image: "../../../../images/products/giesta-entrance-door-p02.png"
 keywords: "Windows and Doors, Grants"
 productType1: "Windows and Doors"
 productType2: ""
 featured: "false"
+sequence: 4
 description: ""
 ---
 
