@@ -58,7 +58,7 @@ const menuData = [
     {
         id: 2,
         text: 'About',
-        url: '/'
+        url: '/about'
     },
     {
         id: 3,
