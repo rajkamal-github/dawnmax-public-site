@@ -10,7 +10,7 @@ const styles = (theme) => ({
     root: {
         padding: '8rem 8rem',
         [theme.breakpoints.down('sm')]:{
-            padding: '8rem 2rem',
+            padding: '6rem 2rem',
         },
         flexGrow: 1,
       },
