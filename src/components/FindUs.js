@@ -44,12 +44,12 @@ export default function FindUs() {
                 <Typography variant="subtitle2" className={classes.subtitle2}>
                     Dawnmax Pvt. Ltd
                 </Typography>
-                <Typography variant="body2">
+                {/* <Typography variant="body2">
                     Flat No: 3, First Floor, Plot No.20
                 </Typography>
                 <Typography variant="body2">
                     3rd Main Rd, Rajalakshmi Nagar
-                </Typography>
+                </Typography> */}
                 <Typography variant="body2">
                     Velachery, Chennai
                 </Typography>
