@@ -1,7 +1,7 @@
 ---
 title: "Handrails"
 date: "2020-06-01"
-image: "../../../images/products/handrails-imperio-01.png"
+image: "../../../images/products/handrails-featured.png"
 keywords: "Handrails"
 productType1: ""
 productType2: ""
