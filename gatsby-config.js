@@ -87,5 +87,13 @@ module.exports = {
         icon: `src/images/web/dawnmax-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-157951929-1",
+        head: true,
+      },
+    }
   ],
 };
