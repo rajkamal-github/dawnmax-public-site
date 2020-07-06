@@ -11,7 +11,7 @@ import LinkedInIcon from './LinkedInIcon';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        padding: '.5rem 8rem',
+        padding: '2rem 8rem',
         [theme.breakpoints.down('sm')]:{
             padding: '.5rem 2rem',
         },
@@ -46,13 +46,13 @@ export default function BottomNav() {
                 <Grid item xs={12} sm={6}>
                     <Copyright />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                {/* <Grid item xs={12} sm={6}>
                     <Box display="flex" className={classes.socialIcons}>
                         <FacebookIcon />
                         <TwitterIcon />
                         <LinkedInIcon />
                     </Box>
-                </Grid>
+                </Grid> */}
             </Grid>
         </div>
     );
