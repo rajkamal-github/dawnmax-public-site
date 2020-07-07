@@ -94,6 +94,14 @@ module.exports = {
         trackingId: "UA-157951929-1",
         head: true,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: urljoin(siteConfig.url, siteConfig.prefix),
+        sitemap: urljoin(siteConfig.url, siteConfig.prefix, 'sitemap.xml'),
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     }
   ],
 };
