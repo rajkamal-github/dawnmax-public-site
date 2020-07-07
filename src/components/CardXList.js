@@ -45,24 +45,6 @@ const query = graphql`
     }  
 `;
 
-const tileData = [
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'Windows and Doors',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'Glass Architecture',
-        author: 'Scott Peck'
-    },
-    {
-        img: 'https://www.dallasglassandauto.com/wp-content/uploads/2017/02/smart-glass.jpg',
-        title: 'Handrails',
-        author: 'Scott Peck'
-    }
-];
-
 const CardXListComponent = (props) => {
     const { classes } = props;
     // console.log(props);

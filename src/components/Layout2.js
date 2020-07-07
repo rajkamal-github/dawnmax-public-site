@@ -3,7 +3,6 @@ import TopNav from './TopNav';
 import BottomNav from './BottomNav';
 import { CssBaseline, makeStyles } from '@material-ui/core';
 import Main2 from './Main2';
-import FindUs from './FindUs';
 import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({

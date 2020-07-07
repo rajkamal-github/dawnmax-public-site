@@ -51,8 +51,8 @@ const BrandsComponent = (props) => {
                                 <Grid item xs={12} sm={4} key={index}>
                                     <div className={classes.tile}>
                                         <div className={classes.tileImageContainer}>
-                                            <a href={d.node.frontmatter.link} target="_blank">
-                                                <img src={d.node.frontmatter.image.publicURL} className={classes.tileImage} />
+                                            <a href={d.node.frontmatter.link} target="_blank" rel="noreferrer">
+                                                <img src={d.node.frontmatter.image.publicURL} alt={d.node.frontmatter.title} className={classes.tileImage} />
                                             </a>
                                         </div>
                                     </div>
@@ -79,19 +79,19 @@ const BrandsComponent = (props) => {
 const query = graphql`
     query MyQuery {
         allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/brands/"}}) {
-        edges {
-            node {
-            frontmatter {
-                title
-                description
-                date(formatString: "MM/DD/yyyy")
-                image {
-                publicURL
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        description
+                        date(formatString: "MM/DD/yyyy")
+                        image {
+                            publicURL
+                        }
+                        link
+                    }
                 }
-                link
             }
-            }
-        }
         }
     }  
 `;

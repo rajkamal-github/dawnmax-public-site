@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Heading from "../components/Heading";
 
 const styles = (theme) => ({

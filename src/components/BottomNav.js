@@ -2,10 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Copyright from '../components/Copyright';
-import { Box } from '@material-ui/core';
-import FacebookIcon from './FacebookIcon';
-import TwitterIcon from './TwitterIcon';
-import LinkedInIcon from './LinkedInIcon';
+// import { Box } from '@material-ui/core';
+// import FacebookIcon from './FacebookIcon';
+// import TwitterIcon from './TwitterIcon';
+// import LinkedInIcon from './LinkedInIcon';
 
 
 const useStyles = makeStyles((theme) => ({

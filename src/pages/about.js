@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout2 from '../components/Layout2';
-import Mission from '../components/Mission';
 import { Typography } from '@material-ui/core';
 import Heading from '../components/Heading';
 

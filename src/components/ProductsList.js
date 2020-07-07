@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import CardX from './CardX';
 import Heading from './Heading';
 import { graphql, StaticQuery } from "gatsby";
-import { getSearchParams } from "gatsby-query-params";
 
 const styles = (theme) => ({
     root: {
@@ -101,7 +100,7 @@ const selectQueryParamValue = (key) => {
 
 const CardXListComponent = (props) => {
     const { classes } = props; 
-    const searchParams = getSearchParams();    
+    // const searchParams = getSearchParams();    
     let filter = selectQueryParamValue('productType1')
 
     let pageTitle = 'All Products';
@@ -158,8 +157,8 @@ const CardXListComponent = (props) => {
 }
 
 const CardXList = (props) => {
-    console.log('CardXList');
-    console.log(props);
+    // console.log('CardXList');
+    // console.log(props);
 
     return (
         <StaticQuery
