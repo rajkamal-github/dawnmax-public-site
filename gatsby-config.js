@@ -99,7 +99,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: urljoin(siteConfig.url, siteConfig.prefix),
-        sitemap: urljoin(siteConfig.url, siteConfig.prefix, 'sitemap.xml'),
+        sitemap: urljoin(siteConfig.url, 'sitemap.xml'),
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
