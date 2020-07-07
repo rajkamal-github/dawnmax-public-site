@@ -7,4 +7,5 @@ module.exports = {
   prefix: "/",
   author: "Being Artisan",
   twitter: "",
+  keywords: "Doors, Windows, Windows and Doors, Glass, Glass Windows, Handrails, Lixil, Imperio, Imperio Railing Systems, Tostem, enox, enoxe, Dawnmax"
 }
