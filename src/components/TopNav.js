@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Logo from './Logo';
 import TopNavMenu from './TopNavMenu';
+import SEO from './seo';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +39,7 @@ export default function TopNav() {
           <TopNavMenu />
         </Toolbar>
       </AppBar>
+      <SEO title="Dawnmax" keywords={[`Door`, `Window`, `Glass`, `Glass Window`, `Lixil`, 'Tostem', `Dawnmax`, `Imperio Railing Systems`, `Imperio`, 'Handrail', `enoxe`]}/>
     </div>
   );
 }
