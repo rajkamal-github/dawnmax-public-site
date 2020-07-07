@@ -29,7 +29,7 @@ const HeadingComponent = (props) => {
 
     return (
         <div className={classes.root}>
-            <Typography className={classes.header} variant="h5" gutterBottom>
+            <Typography className={classes.header} variant="h1" gutterBottom>
                 {props.headerText}
             </Typography>
         </div>
