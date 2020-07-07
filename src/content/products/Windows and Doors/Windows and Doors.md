@@ -11,5 +11,3 @@ description: "Recognized as the leading brand for global housing and building ma
 ---
 
 GRANTS is the flagship product series for TOSTEM. The innovative design results in a large surface area of glass for panoramic view. Taking the standard of aluminium windows and doors to another level. The sliding door is a key product of the GRANTS series with concealed panels to reveal 10% more glass area and reputed smooth operation.
-
-![Grants](./grants-post-01.png)
