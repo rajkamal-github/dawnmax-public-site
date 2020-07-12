@@ -88,7 +88,7 @@ const ProductListPageComponent = (props) => {
   // const searchParams = getSearchParams();    
   let filter = selectQueryParamValue('productType1')
 
-  let pageTitle = 'All Products';
+  let pageTitle = 'Our Products';
   if (filter && filter.length > 0){
       pageTitle = filter;
   }
