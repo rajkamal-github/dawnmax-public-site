@@ -7,7 +7,10 @@ import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        // padding: '0rem 2rem'
+        padding: '8rem 8rem',
+        [theme.breakpoints.down('sm')]:{
+            padding: '6rem 2rem',
+        },
     }
 }));
 

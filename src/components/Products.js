@@ -1,9 +1,7 @@
 import React from 'react';
-import Layout2 from '../components/Layout2';
+import Layout from '../components/Layout';
 import ProductsList from '../components/ProductsList';
 import { graphql, StaticQuery } from "gatsby";
-import { GatsbySeo } from 'gatsby-plugin-next-seo';
-
 
 const query = graphql`
     query {
@@ -84,8 +82,7 @@ const selectQueryParamValue = (key) => {
     return val;
 };
 
-const ProductListPageComponent = (props) => { 
-  // const searchParams = getSearchParams();    
+const ProductListComponent = (props) => {   
   let filter = selectQueryParamValue('productType1')
 
   let pageTitle = 'Our Products';
@@ -100,27 +97,22 @@ const ProductListPageComponent = (props) => {
   props.data.edges = edges;
 
   return (
-    <Layout2>
-      <GatsbySeo
-        title='Our Products | Dawnmax Pvt. Ltd | Chennai, TamilNadu, India'
-        description='We offer our products from our official partners such as Lixil Tostem Aluminium Doors and Windows, Assa Abloy - Enox Glass Hardwares and Imperio Railing Systems'        
-        keywords='Dawnmax, lixil Tostem Chennai, Aluminium Doors and Windows, Imperio Handrails Chennai,  Assa Abloy - Enox Glass Hardwares'
-      />
+    <Layout>
       <ProductsList {...props}/>
-    </Layout2>
+    </Layout>
   );
 }
 
 
-const ProductsPage = (props) => {
+const Products = (props) => {
   return (
       <StaticQuery
           query={query}
           render={data => (
-              <ProductListPageComponent data={data} {...props}/>
+              <ProductListComponent data={data} {...props}/>
           )}
       />
   )
 };
 
-export default ProductsPage;
+export default Products;

@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import CarouselX from '../components/CarouselX';
 import Brands from '../components/Brands';
+import Products from '../components/Products';
 import Mission from '../components/Mission';
 import DriftX from '../components/DriftX';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
@@ -32,6 +33,7 @@ export default function Index() {
       />
       <CarouselX />
       <Brands />
+      <Products />
       <Mission />
       <DriftX />
     </Layout>
