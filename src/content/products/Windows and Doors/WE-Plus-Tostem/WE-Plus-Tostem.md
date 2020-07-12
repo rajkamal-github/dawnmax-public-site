@@ -3,7 +3,7 @@ title: "WE Plus - Tostem"
 date: "2020-06-01"
 image: "../../../../images/products/WE-Plus.png"
 keywords: "Windows and Doors, WE Plus"
-productType1: "Doors and Windows - Tostem"
+productType1: "Windows and Doors - Tostem"
 productType2: ""
 featured: "false"
 sequence: 2

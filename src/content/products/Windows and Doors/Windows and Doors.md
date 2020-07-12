@@ -1,5 +1,5 @@
 ---
-title: "Doors and Windows - Tostem"
+title: "Windows and Doors - Tostem"
 date: "2020-06-01"
 image: "../../../images/products/windows-tostem-01.png"
 keywords: "Windows and Doors"
