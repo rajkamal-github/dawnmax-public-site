@@ -34,6 +34,11 @@ const useStyles = makeStyles((theme) => ({
         color: 'rgba(69, 72, 77, 1)',
         fontSize: '1rem',
         alignSelf: 'center',
+        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        fontWeight: '400',
+        lineHeight: '2.66',
+        letterSpacing: '0.08333em',
+        textTransform: 'uppercase'
       },
       typographyCaption: {
         color: 'rgba(69, 72, 77, 1)',
@@ -56,12 +61,9 @@ export default function CardX(props) {
                       title={props.title}
                   />
                   <CardContent className={classes.cardContent}>
-                      <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
+                      <Typography gutterBottom variant="h1" className={classes.typographyHeader}>
                           {props.title}
                       </Typography>
-                      {/* <Typography variant="body1" component="p" className={classes.typographyCaption}>
-                          Be fearless. Have the courage to take risks. Go where there are no guarantees.
-                      </Typography> */}
                   </CardContent>
               </CardActionArea>
           </Card>
@@ -78,12 +80,9 @@ export default function CardX(props) {
                     title={props.title}
                 />
                 <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
+                    <Typography gutterBottom variant="h1" className={classes.typographyHeader}>
                         {props.title}
                     </Typography>
-                    {/* <Typography variant="body1" component="p" className={classes.typographyCaption}>
-                        Be fearless. Have the courage to take risks. Go where there are no guarantees.
-                    </Typography> */}
                 </CardContent>
             </CardActionArea>
         </Card>
