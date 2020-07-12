@@ -2,8 +2,8 @@
 title: "WE 70 - Tostem"
 date: "2020-06-01"
 image: "../../../../images/products/WE-70.png"
-keywords: "Windows and Doors, WE 70"
-productType1: "Windows and Doors"
+keywords: "Doors and Windows, WE 70"
+productType1: "Doors and Windows - Tostem"
 productType2: ""
 featured: "false"
 sequence: 3

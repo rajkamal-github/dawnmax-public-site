@@ -2,8 +2,8 @@
 title: "Grants - Tostem"
 date: "2020-06-01"
 image: "../../../../images/products/grants.png"
-keywords: "Windows and Doors, Grants"
-productType1: "Windows and Doors"
+keywords: "Doors and Windows, Grants"
+productType1: "Doors and Windows - Tostem"
 productType2: ""
 featured: "false"
 sequence: 1
