@@ -12,6 +12,7 @@
     "gatsby-plugin-google-analytics": "^2.3.10",
     "gatsby-plugin-manifest": "^2.4.9",
     "gatsby-plugin-material-ui": "latest",
+    "gatsby-plugin-next-seo": "^1.6.0",
     "gatsby-plugin-react-helmet": "latest",
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sharp": "^2.6.9",
@@ -30,6 +31,7 @@
     "react-dom": "latest",
     "react-driftjs": "^1.1.11",
     "react-helmet": "latest",
+    "react-helmet-async": "^1.0.6",
     "react-material-ui-carousel": "^1.4.3",
     "url-join": "^4.0.1"
   },

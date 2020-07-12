@@ -39,7 +39,8 @@ export default function TopNav() {
           <TopNavMenu />
         </Toolbar>
       </AppBar>
-      <SEO title="Dawnmax" keywords={[`Door`, `Window`, `Glass`, `Glass Window`, `Lixil`, 'Tostem', `Dawnmax`, `Imperio Railing Systems`, `Imperio`, 'Handrail', `enoxe`]}/>
+      {/* <SEO title="Dawnmax" 
+        keywords={[`Door`, `Window`, `Glass`, `Glass Window`, `Lixil`, 'Tostem', `Dawnmax`, `Imperio Railing Systems`, `Imperio`, 'Handrail', `enoxe`]}/> */}
     </div>
   );
 }

@@ -143,6 +143,9 @@ module.exports = {
             }
           })
       }
+    },
+    {
+      resolve: 'gatsby-plugin-next-seo'
     }
   ],
 };
