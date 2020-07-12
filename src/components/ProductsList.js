@@ -27,8 +27,13 @@ const CardXListComponent = (props) => {
                 {
                     props.data.edges.map((edge, index)=> {
                         let postLink = "/products/" + edge.node.fields.slug;
+
+                        if (edge.node.frontmatter.productType1 !== ''){
+                            postLink = "/products/" + edge.node.frontmatter.productType1 + "/" + edge.node.fields.slug;
+                        }
+
                         // const link = '';
-                        if (edge.node.frontmatter.productType1===''){
+                        if (edge.node.frontmatter.productType1 === ''){
                             if(typeof window !== 'undefined' && typeof window.location !== 'undefined'){
                                 postLink = window.location.pathname + '?productType1='+edge.node.frontmatter.title;
                             }

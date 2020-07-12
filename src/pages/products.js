@@ -106,7 +106,7 @@ const ProductListPageComponent = (props) => {
 }
 
 
-const ProductListPage = (props) => {
+const ProductsPage = (props) => {
   return (
       <StaticQuery
           query={query}
@@ -117,4 +117,4 @@ const ProductListPage = (props) => {
   )
 };
 
-export default ProductListPage;
+export default ProductsPage;

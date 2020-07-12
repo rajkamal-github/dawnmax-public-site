@@ -58,7 +58,7 @@ const menuData = [
     {
         id: 2,
         text: 'Products',
-        url: '/productlist'
+        url: '/products'
     },
     {
         id: 3,

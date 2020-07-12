@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Logo from './Logo';
 import TopNavMenu from './TopNavMenu';
-import SEO from './seo';
+// import SEO from './seo';
 
 
 const useStyles = makeStyles((theme) => ({

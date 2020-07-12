@@ -22,13 +22,16 @@ module.exports.createPages = async ( {graphql, actions}) => {
 
     const res = await graphql(`
         query {
-            allMarkdownRemark {
+            allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {productType1: {ne: ""}}}) {
                 edges {
-                    node {
-                        fields {
-                            slug
-                        }
+                  node {
+                    fields {
+                      slug
                     }
+                    frontmatter {
+                      productType1
+                    }
+                  }
                 }
             }
         }      
@@ -37,7 +40,7 @@ module.exports.createPages = async ( {graphql, actions}) => {
     res.data.allMarkdownRemark.edges.forEach((edge) => {
         createPage({
             component: postTemplate,
-            path: `/products/${edge.node.fields.slug}`,
+            path: `/products/${edge.node.frontmatter.productType1}/${edge.node.fields.slug}`,
             context: {
                 slug: edge.node.fields.slug
             }

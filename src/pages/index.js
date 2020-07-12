@@ -13,16 +13,19 @@ export default function Index() {
         title='Dawnmax Pvt. Ltd | Official Partner of Lixil Tostem India, Assa Abloy Enox Glass Hardwares, Imperio Railing Systems | Chennai, TamilNadu, India'
         description='We at Dawnmax, enhance your dream home by bringing exceptional quality products with trusted service. We are the official Partners of Lixil Tostem Aluminium Doors and Windows, Enox Glass Hardwares and Imperio Railing Systems. We are currently headquartered at Chennai, TamilNadu, India'
         openGraph={{
-          url: 'https://www.facebook.com/Dawnmaxindia',
+          type: 'website',
+          url: 'https://dawnmax.in',
           title: 'Dawnmax Pvt. Ltd | Official Partner of Lixil Tostem India',
           description: 'We at Dawnmax, enhance your dream home by bringing exceptional quality products with trusted service. We are the official Partners of Lixil Tostem Aluminium Doors and Windows, Enox Glass Hardwares and Imperio Railing Systems. We are currently headquartered at Chennai, TamilNadu, India',
-          url: 'https://dawnmax.in',
           site_name: 'Dawnmax Pvt. Ltd | Official Partner of Lixil Tostem India, Assa Abloy Enox Glass Hardwares, Imperio Railing Systems | Chennai, TamilNadu, India'
         }}
         twitter= {{
           handle: '@DawnmaxIndia',
           site: '@DawnmaxIndia',
           cardType: 'summary_large_image',
+          creator: '@DawnmaxIndia',
+          title: 'Dawnmax Pvt. Ltd | Official Partner of Lixil Tostem India, Assa Abloy Enox Glass Hardwares, Imperio Railing Systems | Chennai, TamilNadu, India',
+          description: 'We at Dawnmax, enhance your dream home by bringing exceptional quality products with trusted service. We are the official Partners of Lixil Tostem Aluminium Doors and Windows, Enox Glass Hardwares and Imperio Railing Systems. We are currently headquartered at Chennai, TamilNadu, India'
         }}
       />
       <CarouselX />
