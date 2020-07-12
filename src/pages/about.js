@@ -14,10 +14,13 @@ export default function About(){
       />
       <Heading headerText="About Us"></Heading>
       <Typography variant='body1' gutterBottom>
-        Dawnmax is a multi-disciplinary solution provider firm that offers innovative product and solutions. Our firm is led by young and talented professionals with experience in a wide range of building products and services.
+        We at Dawnmax, enhance your dream home by bringing exceptional quality products with trusted service.
       </Typography>
       <Typography variant='body1' gutterBottom>
-        We at Dawnmax, enhance your dream home by bringing exceptional quality products with trusted service. We are official channel partners of Lixil Tostem Aluminium Doors and Windows, Assa Abloy – Enox glass architecture hardwares and Imperio- Railing Systems. We help our customers with our expertise in the industry to choose right product that suits their need, procure them and install them at our customer sites with experience professionals from our team.
+        To innovate the art of blending design and engineering to make your dream home stylish and functional.
+      </Typography>
+      <Typography variant='body1' gutterBottom>
+        Dawnmax is a multi-disciplinary solution provider firm that offers innovative product and solutions. Our firm is led by young and talented professionals with experience in a wide range of building products and services.
       </Typography>
     </Layout2>
   );

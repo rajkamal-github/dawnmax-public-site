@@ -29,7 +29,7 @@ const styles = (theme) => ({
     },
     missionStatementDetailPaper:{
         backgroundColor: 'rgba(161, 162, 162, 1)',
-        padding: '2rem 0rem',
+        padding: '2rem 2rem',
         color: '#fff',
         boxShadow: 'none',
     },
@@ -51,15 +51,15 @@ const Mission = (props) => {
             >
                 <Grid item xs={12} sm={12} md={6}>
                     <Paper className={classes.missionStatementPaper}>
-                        <Typography variant="h2" gutterBottom className={classes.missionStatement}>
-                            Our Mission is to achieve <strong>MAXimum Excellence</strong> in serving our customers.
+                        <Typography variant="h2" gutterBottom className={classes.missionStatement}>                            
+                            We at Dawnmax, enhance your dream home by delivering exceptional quality products with trusted service.
                         </Typography>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6}>
                     <Paper className={classes.missionStatementDetailPaper}>
                         <Typography variant="h6" gutterBottom className={classes.missionStatementDetail}>
-                            We strive to achieve MAXimum excellence in helping our customers to choose the right building materials to make their vision come true. We help our customers to determine the best brand that has <strong>state of the art design, excellent quality, pre-engineered</strong> which makes the site work simple and low skilled to construct.
+                            Dawnmax is a multi-disciplinary solution provider firm that offers innovative products and solutions. Our firm is led by young and talented professionals with experience in a wide range of building products and services.
                         </Typography>
                     </Paper>
                 </Grid>
