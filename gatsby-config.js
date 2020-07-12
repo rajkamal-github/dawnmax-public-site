@@ -100,7 +100,12 @@ module.exports = {
       options: {
         host: urljoin(siteConfig.url, siteConfig.prefix),
         sitemap: urljoin(siteConfig.url, 'sitemap.xml'),
-        policy: [{ userAgent: '*', allow: '/' }]
+        policy: [
+          { 
+            userAgent: '*'
+            , allow: '/' 
+          }
+        ]
       }
     },
     {
