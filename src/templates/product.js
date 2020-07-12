@@ -67,7 +67,8 @@ const Product = (props) => {
             <div className={classes.root}>
                 <GatsbySeo
                     title={props.data.markdownRemark.frontmatter.title}
-                    description={props.data.markdownRemark.frontmatter.description}        
+                    description={props.data.markdownRemark.frontmatter.description} 
+                    keywords={props.data.markdownRemark.frontmatter.keywords}
                 />
                 <div className={classes.postHeader}>
                     <div className={classes.postHeaderContent}>

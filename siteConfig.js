@@ -6,6 +6,5 @@ module.exports = {
   url: "https://dawnmax.in", // Domain of your site without prefix!
   prefix: "/",
   author: "Being Artisan",
-  twitter: "",
-  keywords: "Doors, Windows, Windows and Doors, Glass, Glass Windows, Handrails, Lixil, Imperio, Imperio Railing Systems, Tostem, enox, enoxe, Dawnmax"
+  twitter: ""
 }

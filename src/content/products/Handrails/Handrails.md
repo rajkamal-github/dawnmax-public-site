@@ -1,5 +1,5 @@
 ---
-title: "Handrails"
+title: "Handrails - Imperio Railing Systems"
 date: "2020-06-01"
 image: "../../../images/products/handrails-featured.png"
 keywords: "Handrails"

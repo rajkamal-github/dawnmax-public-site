@@ -1,8 +1,8 @@
 ---
-title: "Glass Architecure"
+title: "Glass Architectural Hardware - Enox"
 date: "2020-06-01"
 image: "../../../images/products/glass-architecture-featured.png"
-keywords: "Glass Architecture"
+keywords: "Glass Architectural Hardware, Assa Abloy - Enox India, Glass Hardware Chennai"
 productType1: ""
 productType2: ""
 featured: "true"

@@ -2,7 +2,7 @@
 title: "WE 70 - Tostem"
 date: "2020-06-01"
 image: "../../../../images/products/WE-70.png"
-keywords: "Windows and Doors, WE 70"
+keywords: "Windows and Doors, WE 70 - Tostem, Tostem Chennai, Tostem India, Lixil Chennai, Lixil Pvt Ltd"
 productType1: "Windows and Doors - Tostem"
 productType2: ""
 featured: "false"

@@ -2,7 +2,7 @@
 title: "GIESTA Entrance Doors - Tostem"
 date: "2020-06-01"
 image: "../../../../images/products/giesta-entrance-door-p02.png"
-keywords: "Windows and Doors, Grants"
+keywords: "Doors, GIESTA Entrance Doors - Tostem, Tostem Chennai, Tostem India, Lixil Chennai, Lixil Pvt Ltd"
 productType1: "Windows and Doors - Tostem"
 productType2: ""
 featured: "false"

@@ -2,7 +2,7 @@
 title: "Grants - Tostem"
 date: "2020-06-01"
 image: "../../../../images/products/grants.png"
-keywords: "Windows and Doors, Grants"
+keywords: "Windows, Grants - Tostem, Tostem Chennai, Tostem India, Lixil Chennai, Lixil Pvt Ltd"
 productType1: "Windows and Doors - Tostem"
 productType2: ""
 featured: "false"

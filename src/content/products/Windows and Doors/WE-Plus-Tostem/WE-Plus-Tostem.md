@@ -2,7 +2,7 @@
 title: "WE Plus - Tostem"
 date: "2020-06-01"
 image: "../../../../images/products/WE-Plus.png"
-keywords: "Windows and Doors, WE Plus"
+keywords: "Windows, WE Plus - Tostem, Tostem Chennai, Tostem India, Lixil Chennai, Lixil Pvt Ltd"
 productType1: "Windows and Doors - Tostem"
 productType2: ""
 featured: "false"
