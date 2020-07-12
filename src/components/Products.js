@@ -97,9 +97,7 @@ const ProductListComponent = (props) => {
   props.data.edges = edges;
 
   return (
-    <Layout>
-      <ProductsList {...props}/>
-    </Layout>
+    <ProductsList {...props}/>
   );
 }
 

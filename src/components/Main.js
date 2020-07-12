@@ -4,8 +4,8 @@ import { Box, Paper, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     main: {
-      minHeight: '100vh',
-      padding: '0rem 0rem',
+        minHeight: '100vh',
+        padding: '0rem 0rem',
     },
     container: {
         padding: "0rem 0rem"

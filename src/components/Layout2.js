@@ -2,7 +2,7 @@ import React from 'react';
 import TopNav from './TopNav';
 import BottomNav from './BottomNav';
 import { CssBaseline, makeStyles } from '@material-ui/core';
-import Main2 from './Main2';
+import Main from './Main';
 import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,9 +20,9 @@ const Layout2 = (props) => {
         <div className={classes.root}>
             <CssBaseline />
             <TopNav />
-            <Main2>
+            <Main>
                 {props.children}
-            </Main2>
+            </Main>
             <Divider />
             <BottomNav />
         </div>
