@@ -1,9 +1,9 @@
 ---
 title: "Imperio Aluminium Handrails"
 description: "Imperio Railing System has a wide range of Aluminium & Stainless Steel Handrails which are available in Top Mount & Side Mount fittings."
-keywords: "Handrails, Imperio Railing System, Imperio Aluminium Handrails, Sleek Aluminium Handrails, Rectangular Aluminium Handrails, Round Aluminium Handrails, Oval Aluminium Handrails, Square Aluminium Handrails, Dawnmax India"
+keywords: "Handrails, Imperio Railing System, Imperio Handrails, Imperio Aluminium Handrails, Sleek Aluminium Handrails, Rectangular Aluminium Handrails, Round Aluminium Handrails, Oval Aluminium Handrails, Square Aluminium Handrails, Dawnmax India"
 image: "../../../../images/products/Imperio Round Aluminium Handrails.jpg"
-productType1: "Handrails - Imperio Railing System"
+productType1: "Imperio Handrails"
 productType2: ""
 featured: "false"
 sequence: 1

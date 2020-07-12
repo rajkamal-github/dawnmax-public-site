@@ -1,7 +1,7 @@
 ---
-title: "Glass Architectural Hardware - Enox"
+title: "EnoxE Glass Architecture"
 description: ""
-keywords: "Glass Architectural Hardware, Assa Abloy - Enox India, Glass Hardware Chennai"
+keywords: "Glass Architectural Hardware, Assa Abloy - Enox India, EnoxE Glass Architecture, Glass Hardware Chennai"
 date: "2020-06-01"
 image: "../../../images/products/glass-architecture-featured.png"
 productType1: ""

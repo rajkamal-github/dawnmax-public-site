@@ -4,7 +4,7 @@ description: "High quality wood-pattern or metallic finish-doors equipped with u
 keywords: "Doors, Windows and Doors - Tostem, GIESTA Entrance Doors - Tostem, Tostem Chennai, Tostem India, Lixil Chennai, Lixil Pvt Ltd"
 date: "2020-06-01"
 image: "../../../../images/products/giesta-entrance-door-p02.png"
-productType1: "Windows and Doors - Tostem"
+productType1: "Tostem Windows and Doors"
 productType2: ""
 featured: "false"
 sequence: 4
