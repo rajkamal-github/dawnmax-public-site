@@ -24,16 +24,21 @@ const CarouselComponent = (props) => {
     // console.log(props);
  
     return (
-        <Carousel className={classes.root} autoPlay={true} indicators={false} animation="slide" interval="10000">
+        <Carousel className={classes.root} 
+          autoPlay={true} 
+          indicators={true} 
+          animation="fade" 
+          interval="3000"
+          >
             {
                 props.data.allFile.nodes.map( (element, index) => {
                     return (
                         <Card className={classes.root} key={index}>
                             <CardActionArea>
                                 <CardMedia
-                                className={classes.media}
-                                image={element.childImageSharp.fluid.originalImg}
-                                title="Contemplative Reptile"
+                                  className={classes.media}
+                                  image={element.childImageSharp.fluid.originalImg}
+                                  title={element.name}
                                 />
                             </CardActionArea>
                         </Card>

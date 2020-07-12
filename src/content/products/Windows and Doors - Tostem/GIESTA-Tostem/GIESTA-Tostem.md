@@ -1,27 +1,27 @@
 ---
 title: "GIESTA Entrance Doors - Tostem"
+description: "High quality wood-pattern or metallic finish-doors equipped with user-friendly handle with high security lock system gives better convenience to both family and visitors and make us feel glad to be home."
+keywords: "Doors, Windows and Doors - Tostem, GIESTA Entrance Doors - Tostem, Tostem Chennai, Tostem India, Lixil Chennai, Lixil Pvt Ltd"
 date: "2020-06-01"
 image: "../../../../images/products/giesta-entrance-door-p02.png"
-keywords: "Doors, GIESTA Entrance Doors - Tostem, Tostem Chennai, Tostem India, Lixil Chennai, Lixil Pvt Ltd"
 productType1: "Windows and Doors - Tostem"
 productType2: ""
 featured: "false"
 sequence: 4
-description: ""
 ---
 
 High quality wood-pattern or metallic finish-doors equipped with user-friendly handle with high security lock system gives better convenience to both family and visitors and make us feel glad to be home.
 
-![Giesta](./giesta-banner.jpg)
+![GIESTA Tostem Entrance Door](./GIESTA Tostem Entrance Door.jpg)
 
 #### Entrance Door - P01
 
-![Entrance Door - P01](entrance-door-p01.png)
+![GIESTA Tostem Entrance Door P01](./GIESTA Tostem Entrance Door P01.png)
 
 #### Entrance Door - P02
 
-![Entrance Door - P02](entrance-door-p02.png)
+![GIESTA Tostem Entrance Door P02](./GIESTA Tostem Entrance Door P02.png)
 
 #### Entrance Door - P03
 
-![Entrance Door - P03](entrance-door-p03.png)
+![GIESTA Tostem Entrance Door P03](./GIESTA Tostem Entrance Door P03.png)

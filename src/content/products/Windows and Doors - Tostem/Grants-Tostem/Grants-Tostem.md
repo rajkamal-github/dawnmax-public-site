@@ -1,13 +1,13 @@
 ---
 title: "Grants - Tostem"
-date: "2020-06-01"
+description: "GRANTS is the flagship product series for TOSTEM. The innovative design results in a large surface area of glass for panoramic view. Taking the standard of aluminium windows and doors to another level. The sliding door is a key product of the GRANTS series with concealed panels to reveal 10% more glass area and reputed smooth operation."
+keywords: "Windows, Windows and Doors - Tostem, Grants - Tostem, Tostem Chennai, Tostem India, Lixil Chennai, Lixil Pvt Ltd"
 image: "../../../../images/products/grants.png"
-keywords: "Windows, Grants - Tostem, Tostem Chennai, Tostem India, Lixil Chennai, Lixil Pvt Ltd"
 productType1: "Windows and Doors - Tostem"
 productType2: ""
 featured: "false"
 sequence: 1
-description: "GRANTS is the flagship product series for TOSTEM. The innovative design results in a large surface area of glass for panoramic view. Taking the standard of aluminium windows and doors to another level. The sliding door is a key product of the GRANTS series with concealed panels to reveal 10% more glass area and reputed smooth operation."
+date: "2020-06-01"
 ---
 
 GRANTS is the flagship product series for TOSTEM. The innovative design results in a large surface area of glass for panoramic view. Taking the standard of aluminium windows and doors to another level. The sliding door is a key product of the GRANTS series with concealed panels to reveal 10% more glass area and reputed smooth operation.

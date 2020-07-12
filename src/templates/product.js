@@ -48,6 +48,7 @@ export const query = graphql`
             frontmatter{
                 title
                 description
+                keywords
                 image {
                     publicURL
                 }

@@ -58,6 +58,7 @@ export default function CardX(props) {
                   <CardMedia
                       className={classes.cardMedia}
                       image={props.img}
+                      alt={props.title}
                       title={props.title}
                   />
                   <CardContent className={classes.cardContent}>

@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import CardX from '../components/CardX';
 import Heading from '../components/Heading';
 import { graphql, StaticQuery } from "gatsby";
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const styles = (theme) => ({
     root: {
@@ -29,6 +30,7 @@ query ($slug: String! ) {
           frontmatter {
             title
             description
+            keywords
             date(formatString: "MM/DD/yyyy")
             image {
               publicURL
@@ -51,14 +53,21 @@ query ($slug: String! ) {
 const CardXListComponent = (props) => {
     const { classes } = props;
     // console.log(props);
-    let productType1AsHeader = '';
+    let title='', description='', keywords='';
     if (props.data.allMarkdownRemark.edges.length > 0){
-      productType1AsHeader = props.data.allMarkdownRemark.edges[0].node.frontmatter.productType1;
+      title = props.data.allMarkdownRemark.edges[0].node.frontmatter.productType1;
+      description = props.data.allMarkdownRemark.edges[0].node.frontmatter.description;
+      keywords = props.data.allMarkdownRemark.edges[0].node.frontmatter.keywords;
     }
     return (
       <Layout>
         <div className={classes.root}>
-            <Heading headerText={productType1AsHeader} />
+            <GatsbySeo
+                title={title}
+                description={description} 
+                keywords={keywords}
+            />
+            <Heading headerText={title} />
             <Grid container spacing={3}>
                 {
                     props.data.allMarkdownRemark.edges.map((edge, index)=> {
