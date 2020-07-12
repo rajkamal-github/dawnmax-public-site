@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import ProductsList from '../components/ProductsList';
 import { graphql, StaticQuery } from "gatsby";
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 
 const query = graphql`
@@ -100,6 +101,10 @@ const ProductListPageComponent = (props) => {
 
   return (
     <Layout>
+      <GatsbySeo
+        title='Our Products | Dawnmax Pvt. Ltd | Chennai, TamilNadu, India'
+        description='We offer our products from our official partners such as Lixil Tostem Aluminium Doors and Windows, Enox Glass Hardwares and Imperio Railing Systems'        
+      />
       <ProductsList {...props}/>
     </Layout>
   );

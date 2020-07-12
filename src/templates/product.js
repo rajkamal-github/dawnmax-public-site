@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import { withStyles } from '@material-ui/core/styles';
 import Heading from "../components/Heading";
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const styles = (theme) => ({
     root: {
@@ -64,6 +65,10 @@ const Product = (props) => {
     return (
         <Layout>
             <div className={classes.root}>
+                <GatsbySeo
+                    title={props.data.markdownRemark.frontmatter.title}
+                    description={props.data.markdownRemark.frontmatter.description}        
+                />
                 <div className={classes.postHeader}>
                     <div className={classes.postHeaderContent}>
                         <Heading headerText={props.data.markdownRemark.frontmatter.title}></Heading>

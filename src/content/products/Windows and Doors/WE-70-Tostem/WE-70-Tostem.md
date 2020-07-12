@@ -1,5 +1,5 @@
 ---
-title: "WE 70"
+title: "WE 70 - Tostem"
 date: "2020-06-01"
 image: "../../../../images/products/WE-70.png"
 keywords: "Windows and Doors, WE 70"
@@ -11,4 +11,4 @@ description: "WE70 series brings legendary TOSTEM quality to everyday life. Buil
 ---
 
 WE70 series brings legendry TOSTEM quality to eveyday life.Built for mass market while maintaing strict quality standard
-![WE 70](./WE-70.png)
+![WE 70](./WE-70-Tostem.png)
