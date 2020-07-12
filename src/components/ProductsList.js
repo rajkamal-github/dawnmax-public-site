@@ -31,12 +31,8 @@ const CardXListComponent = (props) => {
                         if (edge.node.frontmatter.productType1 !== ''){
                             postLink = "/products/" + edge.node.frontmatter.productType1 + "/" + edge.node.fields.slug;
                         }
-
-                        // const link = '';
-                        if (edge.node.frontmatter.productType1 === ''){
-                            if(typeof window !== 'undefined' && typeof window.location !== 'undefined'){
-                                postLink = window.location.pathname + '?productType1='+edge.node.frontmatter.title;
-                            }
+                        else if (edge.node.frontmatter.productType1 === ''){
+                            postLink = "/products/" + edge.node.fields.slug;
                         }
 
                         if (edge.node.frontmatter['image'])

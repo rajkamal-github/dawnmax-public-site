@@ -51,15 +51,18 @@ query ($slug: String! ) {
 const CardXListComponent = (props) => {
     const { classes } = props;
     // console.log(props);
-
+    let productType1AsHeader = '';
+    if (props.data.allMarkdownRemark.edges.length > 0){
+      productType1AsHeader = props.data.allMarkdownRemark.edges[0].node.frontmatter.productType1;
+    }
     return (
       <Layout>
         <div className={classes.root}>
-            <Heading headerText='Windows and Doors' />
+            <Heading headerText={productType1AsHeader} />
             <Grid container spacing={3}>
                 {
                     props.data.allMarkdownRemark.edges.map((edge, index)=> {
-                        const postLink = "/products/" + edge.node.fields.slug + '?productType1='+edge.node.frontmatter.productType1+'&productType2='+edge.node.frontmatter.productType2;
+                        const postLink = "/products/" + edge.node.frontmatter.productType1 + "/" + edge.node.fields.slug;
                         return (
                             <Grid item xs={12} sm={4} key={index}>
                                 <CardX 

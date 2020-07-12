@@ -18,11 +18,26 @@ module.exports.onCreateNode = ({ node, actions}) => {
 module.exports.createPages = async ( {graphql, actions}) => {
     const { createPage } = actions
 
-    const postTemplate = path.resolve('./src/templates/product.js');
+    // const res = await graphql(`
+    //     query {
+    //         allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {productType1: {ne: ""}}}) {
+    //             edges {
+    //               node {
+    //                 fields {
+    //                   slug
+    //                 }
+    //                 frontmatter {
+    //                   productType1
+    //                 }
+    //               }
+    //             }
+    //         }
+    //     }      
+    // `);
 
     const res = await graphql(`
         query {
-            allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {productType1: {ne: ""}}}) {
+            allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}}) {
                 edges {
                   node {
                     fields {
@@ -38,13 +53,26 @@ module.exports.createPages = async ( {graphql, actions}) => {
     `);
 
     res.data.allMarkdownRemark.edges.forEach((edge) => {
-        createPage({
-            component: postTemplate,
-            path: `/products/${edge.node.frontmatter.productType1}/${edge.node.fields.slug}`,
-            context: {
-                slug: edge.node.fields.slug
-            }
-        });
+        if (edge.node.frontmatter.productType1 !== ''){
+            const postTemplate = path.resolve('./src/templates/product.js');
+            createPage({
+                component: postTemplate,
+                path: `/products/${edge.node.frontmatter.productType1}/${edge.node.fields.slug}`,
+                context: {
+                    slug: edge.node.fields.slug
+                }
+            });
+        }
+        else{
+            const postTemplate = path.resolve('./src/templates/products.js');
+            createPage({
+                component: postTemplate,
+                path: `/products/${edge.node.fields.slug}`,
+                context: {
+                    slug: edge.node.fields.slug
+                }
+            });
+        }
     });
 }
 
