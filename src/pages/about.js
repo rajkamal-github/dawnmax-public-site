@@ -2,20 +2,21 @@ import React from 'react';
 import Layout2 from '../components/Layout2';
 import { Typography } from '@material-ui/core';
 import Heading from '../components/Heading';
-
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 export default function About(){
   return (
     <Layout2>
+      <GatsbySeo
+        title='About Us | Dawnmax Pvt. Ltd | Chennai, TamilNadu, India'
+        description='We at Dawnmax, enhance your dream home by bringing exceptional quality products with trusted service.'        
+      />
       <Heading headerText="About Us"></Heading>
       <Typography variant='body1' gutterBottom>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Dawnmax is a multi-disciplinary solution provider firm that offers innovative product and solutions. Our firm is led by young and talented professionals with experience in a wide range of building products and services.
       </Typography>
       <Typography variant='body1' gutterBottom>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </Typography>
-      <Typography variant='body1' gutterBottom>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        We at Dawnmax, enhance your dream home by bringing exceptional quality products with trusted service. We are official channel partners of Lixil Tostem Aluminium Doors and Windows, Assa Abloy – Enox glass architecture hardwares and Imperio- Railing Systems. We help our customers with our expertise in the industry to choose right product that suits their need, procure them and install them at our customer sites with experience professionals from our team.
       </Typography>
     </Layout2>
   );
