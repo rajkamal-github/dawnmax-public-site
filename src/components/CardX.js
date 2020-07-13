@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
       typographyHeader: {
         color: 'rgba(69, 72, 77, 1)',
         fontSize: '1rem',
-        alignSelf: 'center',
+        textAlign: 'center',
         fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
         fontWeight: '400',
         lineHeight: '2.66',
