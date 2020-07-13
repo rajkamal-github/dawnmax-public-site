@@ -64,8 +64,15 @@ const CardXListComponent = (props) => {
         <div className={classes.root}>
             <GatsbySeo
                 title={title}
-                description={description} 
-                keywords={keywords}
+                description={description}
+                metaTags={
+                  [
+                    {
+                      property: 'keywords',
+                      content: {keywords}
+                    }
+                  ]
+                }
             />
             <Heading headerText={title} />
             <Grid container spacing={3}>

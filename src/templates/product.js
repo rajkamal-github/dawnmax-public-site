@@ -62,14 +62,20 @@ export const query = graphql`
 
 const Product = (props) => {
     const { classes } = props;
-
     return (
         <Layout>
             <div className={classes.root}>
                 <GatsbySeo
                     title={props.data.markdownRemark.frontmatter.title}
-                    description={props.data.markdownRemark.frontmatter.description} 
-                    keywords={props.data.markdownRemark.frontmatter.keywords}
+                    description={props.data.markdownRemark.frontmatter.description}
+                    metaTags={
+                        [
+                          {
+                            property: 'keywords',
+                            content: props.data.markdownRemark.frontmatter.keywords
+                          }
+                        ]
+                    }
                 />
                 <div className={classes.postHeader}>
                     <div className={classes.postHeaderContent}>

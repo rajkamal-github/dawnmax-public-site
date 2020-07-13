@@ -9,8 +9,15 @@ export default function About(){
     <Layout2>
       <GatsbySeo
         title='About Us | Dawnmax Pvt. Ltd | Chennai, TamilNadu, India'
-        description='We at Dawnmax, enhance your dream home by bringing exceptional quality products with trusted service.'   
-        keywords="Dawnmmax, Dawnmax Pvt. Ltd, About Us | Dawnmax, Dawnamx Chennai"     
+        description='We at Dawnmax, enhance your dream home by bringing exceptional quality products with trusted service.'
+        metaTags={
+          [
+            {
+              property: 'keywords',
+              content: 'Dawnmmax, Dawnmax Pvt. Ltd, About Us | Dawnmax, Dawnamx Chennai'
+            }
+          ]
+        }
       />
       <Heading headerText="About Us"></Heading>
       <Typography variant='body1' gutterBottom>
