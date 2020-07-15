@@ -18,7 +18,7 @@ export default function Index() {
           [
             {
               property: 'keywords',
-              content: 'Dawnmax, lixil, Tostem, lixil India, lixil Pvt ltd, Tostem Chennai, lixil Chennai, Imperio Railing Systems, Imperio Chennai, Handrails chennai, Railing Systems Chennai, Glass Hardwares Chennai, Assa Abloy - Enox Chennai'
+              content: 'Dawnmax, Official Partner of Lixil Tostem India, lixil, Tostem, lixil India, lixil Pvt ltd, Tostem Chennai, lixil Chennai, Imperio Railing Systems, Imperio Chennai, Handrails chennai, Railing Systems Chennai, Glass Hardwares Chennai, Assa Abloy - Enox Chennai, Official Partners of Lixil Tostem India, Channel Partner of Lixil Tostem India, Channel Partners of Lixil Tostem India, Lixil Tostem India dealers, Assa Abloy - Enox dealers, Imperio dealers, Imperio railings dealers, Imperio railing dealers, Handails dealers chennai, Handrail dealers chennai'
             }
           ]
         }
