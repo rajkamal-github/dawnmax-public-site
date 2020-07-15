@@ -4,7 +4,6 @@ import CarouselX from '../components/CarouselX';
 import Brands from '../components/Brands';
 import Products from '../components/Products';
 import Mission from '../components/Mission';
-import DriftX from '../components/DriftX';
 import Main2 from '../components/Main2';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
@@ -45,7 +44,6 @@ export default function Index() {
         <Products />
       </Main2>
       <Mission />
-      <DriftX />
     </Layout>
   );
 }

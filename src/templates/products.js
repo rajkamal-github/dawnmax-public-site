@@ -1,19 +1,18 @@
 import React from 'react';
-import { makeStyles, withStyles} from '@material-ui/core/styles';
-import Layout from "../components/Layout"
-// import Typography from '@material-ui/core/Typography';
+import { withStyles} from '@material-ui/core/styles';
+import Layout2 from '../components/Layout2';
 import Grid from '@material-ui/core/Grid';
 import CardX from '../components/CardX';
 import Heading from '../components/Heading';
-import { graphql, StaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const styles = (theme) => ({
     root: {
-        padding: '8rem 8rem',
-        [theme.breakpoints.down('xs')]:{
-            padding: '4rem 2rem',
-        },
+        // padding: '8rem 8rem',
+        // [theme.breakpoints.down('xs')]:{
+        //     padding: '4rem 2rem',
+        // },
         flexGrow: 1,
       },
       header:{
@@ -60,7 +59,7 @@ const CardXListComponent = (props) => {
       keywords = props.data.allMarkdownRemark.edges[0].node.frontmatter.keywords;
     }
     return (
-      <Layout>
+      <Layout2>
         <div className={classes.root}>
             <GatsbySeo
                 title={title}
@@ -93,7 +92,7 @@ const CardXListComponent = (props) => {
                 }
             </Grid>
         </div>
-      </Layout>
+      </Layout2>
     );
 }
 

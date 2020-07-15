@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/Layout"
+import Layout2 from "../components/Layout2"
 import { graphql } from "gatsby"
 import { withStyles } from '@material-ui/core/styles';
 import Heading from "../components/Heading";
@@ -7,10 +7,10 @@ import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 const styles = (theme) => ({
     root: {
-        padding: '8rem 8rem',
-        [theme.breakpoints.down('sm')]:{
-            padding: '8rem 2rem',
-        },
+        // padding: '8rem 8rem',
+        // [theme.breakpoints.down('sm')]:{
+        //     padding: '8rem 2rem',
+        // },
     },
     postHeader: {
         display: 'flex',
@@ -63,7 +63,7 @@ export const query = graphql`
 const Product = (props) => {
     const { classes } = props;
     return (
-        <Layout>
+        <Layout2>
             <div className={classes.root}>
                 <GatsbySeo
                     title={props.data.markdownRemark.frontmatter.title}
@@ -96,7 +96,7 @@ const Product = (props) => {
                     
                 </div>
             </div>
-        </Layout>
+        </Layout2>
     )
 }
 

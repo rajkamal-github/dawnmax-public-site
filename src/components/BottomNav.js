@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         padding: '2rem 8rem',
         [theme.breakpoints.down('sm')]:{
-            padding: '.5rem 2rem',
+            padding: '1rem 2rem',
         },
         backgroundColor: 'rgba(249, 189, 59, .76)',
         color: '#45484D',

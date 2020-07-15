@@ -5,9 +5,9 @@ import { Box, Paper, makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     main: {
       minHeight: '100vh',
-      padding: '2rem 8rem',
+      padding: '8rem 8rem',
       [theme.breakpoints.down('sm')]:{
-          padding: '1rem 2rem',
+          padding: '6rem 2rem',
       },
     },
     container: {
