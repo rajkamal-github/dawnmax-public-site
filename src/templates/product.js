@@ -50,6 +50,14 @@ export const query = graphql`
                 keywords
                 image {
                     publicURL
+                    childImageSharp {
+                        fluid(maxHeight: 500, maxWidth: 500) {
+                            base64
+                            tracedSVG
+                            srcWebp
+                            originalImg
+                        }
+                    }
                 }
                 date(formatString: "MM/DD/yyyy")
                 featured

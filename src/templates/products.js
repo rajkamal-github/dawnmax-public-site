@@ -33,6 +33,14 @@ query ($slug: String! ) {
             date(formatString: "MM/DD/yyyy")
             image {
               publicURL
+              childImageSharp {
+                fluid(maxHeight: 500, maxWidth: 500) {
+                    base64
+                    tracedSVG
+                    srcWebp
+                    originalImg
+                }
+              }
             }
             featured
             productType1
@@ -77,9 +85,9 @@ const CardXListComponent = (props) => {
                 {
                     props.data.allMdx.edges.map((edge, index)=> {
                         return (
-                            <Grid item xs={12} sm={4} key={index}>
+                            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
                                 <CardX 
-                                    img={edge.node.frontmatter.image.publicURL}
+                                    img={edge.node.frontmatter.image.childImageSharp.fluid.srcWebp}
                                     link={edge.node.fields.slug}
                                     title={edge.node.frontmatter.title} 
                                     {...edge}

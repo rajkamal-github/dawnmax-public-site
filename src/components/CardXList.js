@@ -30,7 +30,15 @@ const query = graphql`
                         description
                         date(formatString: "MM/DD/yyyy")
                         image {
-                        publicURL
+                            publicURL,
+                            childImageSharp {
+                                fluid(maxHeight: 500, maxWidth: 500) {
+                                    base64
+                                    tracedSVG
+                                    srcWebp
+                                    originalImg
+                                }
+                            },
                         }
                         link
                         featured
@@ -57,7 +65,7 @@ const CardXListComponent = (props) => {
                         return (
                             <Grid item xs={12} sm={4} key={index}>
                                 <CardX 
-                                    img={edge.node.frontmatter.image.publicURL}
+                                    img={edge.node.frontmatter.image.childImageSharp.fluid.srcWebp}
                                     link={postLink}
                                     title={edge.node.frontmatter.title} 
                                     {...edge}

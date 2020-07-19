@@ -66,6 +66,9 @@ const logoQuery = graphql`
           dir
           childImageSharp {
             fluid {
+              base64
+              tracedSVG
+              srcWebp
               originalImg
             }
           }

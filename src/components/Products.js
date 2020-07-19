@@ -14,10 +14,13 @@ const query = graphql`
                   image {
                     publicURL
                     childImageSharp {
-                        fluid {
-                          src
+                        fluid(maxHeight: 500, maxWidth: 500) {
+                            base64
+                            tracedSVG
+                            srcWebp
+                            originalImg
                         }
-                      }
+                    }
                   }
                   link
                   featured
