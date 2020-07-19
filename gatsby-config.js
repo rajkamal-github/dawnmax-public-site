@@ -22,13 +22,15 @@ module.exports = {
         // },
       },
     },
-    // If you want to use styled components you should add the plugin here.
-    // 'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -40,27 +42,9 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
         ],
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -68,15 +52,13 @@ module.exports = {
         path: `${__dirname}/src/content/`,
       },
     },
-    `gatsby-transformer-sharp`, 
     {
-      resolve: `gatsby-plugin-sharp`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 75,
+        name: 'images',
+        path: `${__dirname}/src/images/`,
       },
-    },
+    },  
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,

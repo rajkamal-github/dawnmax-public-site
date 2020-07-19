@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { withStyles } from '@material-ui/core/styles';
 import Heading from "../components/Heading";
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const styles = (theme) => ({
     root: {
@@ -37,13 +38,11 @@ const styles = (theme) => ({
 });
 
 export const query = graphql`
-    query ($slug: String! ) {
-        markdownRemark (
-        fields : {
-            slug : {
-            eq : $slug
+    query ($id: String! ) {
+        mdx (
+            id : {
+                eq : $id
             }
-        }
         ) {
             frontmatter{
                 title
@@ -55,45 +54,42 @@ export const query = graphql`
                 date(formatString: "MM/DD/yyyy")
                 featured
             }
-            html
+            body
         }
     }
 `;
 
 const Product = (props) => {
     const { classes } = props;
+    console.log('Template product');
+    console.log(props);
+    const post = props.data.mdx;
+
     return (
         <Layout2>
             <div className={classes.root}>
                 <GatsbySeo
-                    title={props.data.markdownRemark.frontmatter.title}
-                    description={props.data.markdownRemark.frontmatter.description}
+                    title={props.data.mdx.frontmatter.title}
+                    description={props.data.mdx.frontmatter.description}
                     metaTags={
                         [
                           {
                             property: 'keywords',
-                            content: props.data.markdownRemark.frontmatter.keywords
+                            content: props.data.mdx.frontmatter.keywords
                           }
                         ]
                     }
                 />
                 <div className={classes.postHeader}>
                     <div className={classes.postHeaderContent}>
-                        <Heading headerText={props.data.markdownRemark.frontmatter.title}></Heading>
-                        {/* <Typography gutterBottom variant="overline" className={classes.typographyHeader}>
-                            {props.data.markdownRemark.frontmatter.title}
-                        </Typography> */}
+                        <Heading headerText={props.data.mdx.frontmatter.title}></Heading>
                     </div>
-                    {/* <div className={classes.postHeaderMedia}>
-                        <img 
-                            src={props.data.markdownRemark.frontmatter.image.publicURL} 
-                            alt={props.data.markdownRemark.frontmatter.title}
-                            className={classes.postHeaderImg}
-                        />
-                    </div> */}
                 </div>
-                <div className={classes.postContent} dangerouslySetInnerHTML={{__html : props.data.markdownRemark.html}}>
-                    
+                <div 
+                    className={classes.postContent}>
+                    <MDXRenderer>
+                        {post.body}
+                    </MDXRenderer>
                 </div>
             </div>
         </Layout2>

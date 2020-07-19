@@ -26,8 +26,8 @@ const CarouselComponent = (props) => {
     return (
         <Carousel className={classes.root} 
           autoPlay={true} 
-          indicators={true} 
-          animation="fade" 
+          indicators={false} 
+          animation="slide" 
           interval="3000"
           >
             {

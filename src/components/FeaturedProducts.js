@@ -22,7 +22,7 @@ const styles = (theme) => ({
 
 const query = graphql`
     query {
-        allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {eq: "true"}}}) {
+        allMdx(sort: {fields: frontmatter___title}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {eq: "true"}}}) {
             edges {
                 node {
                     frontmatter {
@@ -36,9 +36,7 @@ const query = graphql`
                         featured
                     }
                     fileAbsolutePath
-                    fields {
-                      slug
-                    }
+                    slug
                 }
             }
         }
@@ -54,7 +52,7 @@ const CardXListComponent = (props) => {
             <Heading headerText='Featured Products' />
             <Grid container spacing={3}>
                 {
-                    props.data.allMarkdownRemark.edges.map((edge, index)=> {
+                    props.data.allMdx.edges.map((edge, index)=> {
                         const postLink = "/productlist-"+ edge.node.frontmatter.title;
                         return (
                             <Grid item xs={12} sm={4} key={index}>

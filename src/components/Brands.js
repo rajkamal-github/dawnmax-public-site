@@ -34,7 +34,7 @@ const styles = (theme) => ({
 const BrandsComponent = (props) => {
     const { classes } = props;
     // console.log(props);
-    const tileData = props.data.allMarkdownRemark.edges;
+    const tileData = props.data.allMdx.edges;
 
     return (
         <div className={classes.root}>
@@ -65,20 +65,9 @@ const BrandsComponent = (props) => {
     )
 }
 
-//   query {
-//     allFile(filter: {dir: {regex: "/brands/"}}) {
-//             edges {
-//                 node {
-//                 name
-//                 publicURL
-//                 }
-//             }
-//         }
-//     }
-
 const query = graphql`
     query MyQuery {
-        allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/brands/"}}) {
+        allMdx(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/brands/"}}) {
             edges {
                 node {
                     frontmatter {

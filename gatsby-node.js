@@ -1,50 +1,41 @@
 const path = require('path');
+const { createFilePath } = require("gatsby-source-filesystem")
 
 // Markdown config
-module.exports.onCreateNode = ({ node, actions}) => {
+module.exports.onCreateNode = ({ node, actions, getNode}) => {
     const { createNodeField } = actions;
-
-    if(node.internal.type==='MarkdownRemark'){
-        const slug = path.basename(node.fileAbsolutePath, '.md');
-        
+    
+    if (node.internal.type === "Mdx") {
+        const value = createFilePath({ node, getNode });
         createNodeField({
+            // Name of the field you are adding
+            name: "slug",
+            // Individual MDX node
             node,
-            name: 'slug',
-            value: slug
-        })
+            // Generated value based on filepath with "blog" prefix. you
+            // don't need a separating "/" before the value because
+            // createFilePath returns a path with the leading "/".
+            value: `${value}`,
+        });
     }
 }
 
 module.exports.createPages = async ( {graphql, actions}) => {
-    const { createPage } = actions
-
-    // const res = await graphql(`
-    //     query {
-    //         allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {productType1: {ne: ""}}}) {
-    //             edges {
-    //               node {
-    //                 fields {
-    //                   slug
-    //                 }
-    //                 frontmatter {
-    //                   productType1
-    //                 }
-    //               }
-    //             }
-    //         }
-    //     }      
-    // `);
+    const { createPage } = actions    
 
     const res = await graphql(`
         query {
-            allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}}) {
+            allMdx {
                 edges {
                   node {
+                    id
                     fields {
                       slug
                     }
                     frontmatter {
                       productType1
+                      featured
+                      title
                     }
                   }
                 }
@@ -52,60 +43,33 @@ module.exports.createPages = async ( {graphql, actions}) => {
         }      
     `);
 
-    res.data.allMarkdownRemark.edges.forEach((edge) => {
-        if (edge.node.frontmatter.productType1 !== ''){
-            const postTemplate = path.resolve('./src/templates/product.js');
+    const posts = res.data.allMdx.edges.filter(x => x.node.fields.slug.indexOf('/brands/') == -1);   
+    
+    posts.forEach( ({ node } , index) => {  
+        
+        if (node.frontmatter.featured === "true"){
             createPage({
-                component: postTemplate,
-                path: `/products/${edge.node.frontmatter.productType1}/${edge.node.fields.slug}`,
-                context: {
-                    slug: edge.node.fields.slug
-                }
+                // This is the slug you created before
+                // (or `node.frontmatter.slug`)
+                path: node.fields.slug,
+                // This component will wrap our MDX content
+                component: path.resolve(`./src/templates/products.js`),
+                // You can use the values in this context in
+                // our page layout component
+                context: { slug: node.frontmatter.title },
             });
         }
         else{
-            const postTemplate = path.resolve('./src/templates/products.js');
             createPage({
-                component: postTemplate,
-                path: `/products/${edge.node.fields.slug}`,
-                context: {
-                    slug: edge.node.fields.slug
-                }
+                // This is the slug you created before
+                // (or `node.frontmatter.slug`)
+                path: node.fields.slug,
+                // This component will wrap our MDX content
+                component: path.resolve(`./src/templates/product.js`),
+                // You can use the values in this context in
+                // our page layout component
+                context: { id: node.id },
             });
         }
     });
 }
-
-// module.exports.createPages = async ( {graphql, actions}) => {
-//     const { createPage } = actions
-
-//     const postTemplate = path.resolve('./src/templates/products.js');
-
-//     const res = await graphql(`
-//         query {
-//             allMarkdownRemark(filter: {frontmatter: {productType1: {eq: ""}, productType2: {eq: ""}}}) {
-//                 edges {
-//                     node {
-//                         fields {
-//                             slug
-//                         }
-//                         frontmatter {
-//                             productType1
-//                             productType2
-//                         }
-//                     }
-//                 }
-//             }
-//         }      
-//     `);
-
-//     res.data.allMarkdownRemark.edges.forEach((edge) => {
-//         createPage({
-//             component: postTemplate,
-//             path: `/productsfeatured/${edge.node.fields.slug}`,
-//             context: {
-//                 slug: edge.node.fields.slug
-//             }
-//         });
-//     });
-// }

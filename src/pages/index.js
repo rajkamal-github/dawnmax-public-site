@@ -4,7 +4,7 @@ import CarouselX from '../components/CarouselX';
 import Brands from '../components/Brands';
 import Products from '../components/Products';
 import Mission from '../components/Mission';
-import Main2 from '../components/Main2';
+import MainSubHome from '../components/MainSubHome';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 export default function Index() {
@@ -39,10 +39,10 @@ export default function Index() {
         }}
       />
       <CarouselX />
-      <Main2>
+      <MainSubHome>
         <Brands />
         <Products />
-      </Main2>
+      </MainSubHome>
       <Mission />
     </Layout>
   );

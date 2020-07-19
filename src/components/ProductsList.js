@@ -26,13 +26,13 @@ const CardXListComponent = (props) => {
             <Grid container spacing={3}>
                 {
                     props.data.edges.map((edge, index)=> {
-                        let postLink = "/products/" + edge.node.fields.slug;
+                        let postLink = edge.node.fields.slug;
 
                         if (edge.node.frontmatter.productType1 !== ''){
-                            postLink = "/products/" + edge.node.frontmatter.productType1 + "/" + edge.node.fields.slug;
+                            postLink = edge.node.frontmatter.productType1 + "/" + edge.node.fields.slug;
                         }
                         else if (edge.node.frontmatter.productType1 === ''){
-                            postLink = "/products/" + edge.node.fields.slug;
+                            postLink = edge.node.fields.slug;
                         }
 
                         if (edge.node.frontmatter['image'])

@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from "gatsby";
 
 const query = graphql`
     query {
-        allMarkdownRemark(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {}, productType1: {}, productType2: {}}}) {
+        allMdx(sort: {fields: frontmatter___sequence}, filter: {fileAbsolutePath: {regex: "/src/content/products/"}, frontmatter: {featured: {}, productType1: {}, productType2: {}}}) {
             edges {
               node {
                 frontmatter {
@@ -89,7 +89,7 @@ const ProductListComponent = (props) => {
       pageTitle = filter;
   }
   
-  let edges = props.data.allMarkdownRemark.edges.filter(x => x.node.frontmatter.productType1===filter);
+  let edges = props.data.allMdx.edges.filter(x => x.node.frontmatter.productType1===filter);
 
   props.data.pageTitle = pageTitle;
   props.data.filter = filter;

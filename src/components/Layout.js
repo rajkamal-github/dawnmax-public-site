@@ -2,7 +2,7 @@ import React from 'react';
 import TopNav from './TopNav';
 import BottomNav from './BottomNav';
 import { CssBaseline, makeStyles } from '@material-ui/core';
-import Main from './Main';
+import MainHome from './MainHome';
 import FindUs from './FindUs';
 import Divider from '@material-ui/core/Divider';
 import DriftX from '../components/DriftX';
@@ -19,9 +19,9 @@ const Layout = (props) => {
         <div className={classes.root}>
             <CssBaseline />
             <TopNav />
-            <Main>
+            <MainHome>
                 {props.children}
-            </Main>
+            </MainHome>
             <FindUs />
             <Divider />
             <BottomNav />
