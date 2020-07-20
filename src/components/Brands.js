@@ -2,7 +2,7 @@ import React from 'react';
 import Heading from './Heading';
 import { withStyles } from '@material-ui/styles';
 import {Grid } from '@material-ui/core';
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery, Link } from "gatsby";
 
 const styles = (theme) => ({
     root: {
@@ -51,9 +51,12 @@ const BrandsComponent = (props) => {
                                 <Grid item xs={12} sm={4} key={index}>
                                     <div className={classes.tile}>
                                         <div className={classes.tileImageContainer}>
-                                            <a href={d.node.frontmatter.link} target="_blank" rel="noreferrer">
+                                            <Link to={d.node.frontmatter.link}>
                                                 <img src={d.node.frontmatter.image.publicURL} alt={d.node.frontmatter.title} className={classes.tileImage} />
-                                            </a>
+                                            </Link>
+                                            {/* <a href={d.node.frontmatter.link}>
+                                                <img src={d.node.frontmatter.image.publicURL} alt={d.node.frontmatter.title} className={classes.tileImage} />
+                                            </a> */}
                                         </div>
                                     </div>
                                 </Grid>
