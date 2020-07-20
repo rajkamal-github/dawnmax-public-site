@@ -6,8 +6,7 @@ const DriftX = (props) => {
     return (
       <Drift
         appId="wchwkh7fnsz3"
-        userId = "dawnmaxhelpdesk"
-        />
+      />
     )
 }
 
