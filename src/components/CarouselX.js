@@ -16,12 +16,65 @@ const useStyles = makeStyles((theme) => ({
         height: '80vh',
         objectFit: 'none',
         objectPosition: '50% 50%'
+    },
+    overlay: {
+      position: 'absolute',
+      top: '30vh',
+      right: '15vh',
+      width: '50vw',
+      // color: '#45484D',
+      // backgroundColor: 'rgba(249, 189, 59, .76)',
+      color: 'rgba(249, 189, 59, .76)',
+      backgroundColor: 'rgba(69,72,77, .78)',
+      padding: '4rem 4rem',
+      [theme.breakpoints.down('sm')]:{
+          display: 'none',
+      },
+    },
+    overlayHeader: {
+      padding: '1rem 0rem',
+      fontSize: '2.6rem',
+      letterSpacing: '0.08333em',
+      // textTransform: 'uppercase',
+      fontWeight: '800',
+      lineHeight: '1.6',
+      textTransform: 'uppercase',
+    },
+    overlayDetail: {
+      fontSize: '1.6rem',
+      letterSpacing: '0.08333em',
+      // textTransform: 'uppercase',
+      fontWeight: '400',
+      lineHeight: '1.6'
     }
 }));
 
 const CarouselComponent = (props) => {
     const classes = useStyles();
     // console.log(props);
+
+    let overlayContent = [
+      {
+        header: 'TOSTEM PRE-ENGINEERED WINDOWS',
+        detail: 'The Next Evolution in Window Design'
+      },
+      {
+        header: 'TOSTEM GRANTS',
+        detail: 'Discover collection in our featured products'
+      },
+      {
+        header: 'Lixil Tostem Minimalistic Design',
+        detail: 'Extreme simplicity gives distinctive appearance'
+      },
+      {
+        header: 'ENOX Glass Architecture',
+        detail: 'Elegant and Reliable Glass Architectural Hardware'
+      },
+      {
+        header: 'Imperio Railing System',
+        detail: 'High quality, unique, extravagant Railing Systems'
+      }
+    ];
  
     return (
         <Carousel className={classes.root} 
@@ -32,6 +85,7 @@ const CarouselComponent = (props) => {
           >
             {
                 props.data.allFile.nodes.map( (element, index) => {
+                    let overlayAd = overlayContent[index];
                     return (
                         <Card className={classes.root} key={index}>
                             <CardActionArea>
@@ -40,6 +94,14 @@ const CarouselComponent = (props) => {
                                   image={element.childImageSharp.fluid.originalImg}
                                   title={element.name}
                                 />
+                                <div className={classes.overlay}>
+                                  <div className={classes.overlayHeader}>
+                                    {overlayAd.header}
+                                  </div>
+                                  <div className={classes.overlayDetail}>
+                                    {overlayAd.detail}
+                                  </div>
+                             </div>
                             </CardActionArea>
                         </Card>
                     )
