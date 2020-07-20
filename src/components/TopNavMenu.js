@@ -42,6 +42,7 @@ const useStyles = (theme) => ({
         letterSpacing: '0.08333em',
         fontWeight: '200',
         textTransform: 'uppercase',
+        lineHeight: '2'
       },
       menuButton: {
         // marginRight: theme.spacing(2),

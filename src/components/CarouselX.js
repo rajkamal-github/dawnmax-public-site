@@ -83,7 +83,7 @@ const CarouselComponent = (props) => {
           autoPlay={true} 
           indicators={false} 
           animation="slide" 
-          interval="3000"
+          interval="5000"
           >
             {
                 props.data.allFile.nodes.map( (element, index) => {
