@@ -21,12 +21,9 @@ const useStyles = (theme) => ({
       },
       button: {
         margin: '.5rem .5rem',
-        // backgroundColor: '#45484D'
-        // backgroundColor: 'none',
-        // background: 'transparent',
-        // border: 'none',
         color: '#45484D',
-        // boxShadow: 'none',
+        letterSpacing: '0.08333em',
+        fontWeight: '200',
       },
       buttonHover:{
           backgroundColor: '#45484D',
@@ -41,10 +38,16 @@ const useStyles = (theme) => ({
         textDecoration: 'none',
         color: '#45484D',
       },
+      menuLinkItem: {
+        letterSpacing: '0.08333em',
+        fontWeight: '200',
+        textTransform: 'uppercase',
+      },
       menuButton: {
         // marginRight: theme.spacing(2),
       },
       menuList: {
+          padding: '1rem 0rem',
           backgroundColor: 'rgba(249, 189, 59, .76)'
       },
 });
@@ -128,6 +131,7 @@ const TopNavMenu = (props) => {
                                     <Link key={index} to={x.url} className={props.classes.menuLink}>
                                         <MenuItem key={x.id} 
                                             // onClick={handleMenuItemClose(x.url)} 
+                                            className={props.classes.menuLinkItem}
                                             url={x.url}
                                         >
                                             {x.text}

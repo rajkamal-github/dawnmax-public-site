@@ -85,11 +85,12 @@ const CardXListComponent = (props) => {
                 {
                     props.data.allMdx.edges.map((edge, index)=> {
                         return (
-                            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                            <Grid item xs={12} sm={6} md={4} key={index}>
                                 <CardX 
                                     img={edge.node.frontmatter.image.childImageSharp.fluid.srcWebp}
                                     link={edge.node.fields.slug}
-                                    title={edge.node.frontmatter.title} 
+                                    title={edge.node.frontmatter.title}
+                                    description={edge.node.frontmatter.description}
                                     {...edge}
                                 />
                             </Grid>

@@ -10,7 +10,7 @@ import { Link} from "gatsby";
 const useStyles = makeStyles((theme) => ({
     root: {
         boxShadow: 'none',
-        backgroundColor: 'rgba(249, 189, 59, .08)',
+        backgroundColor: 'rgba(255, 255, 255, 1)',
         borderRadius: 'unset',
       },
       cardLink: {
@@ -19,26 +19,39 @@ const useStyles = makeStyles((theme) => ({
       },
       cardActionArea: {
         // display: 'flex',
-        // flexDirection: 'column'
+        // flexDirection: 'row'
       },
       cardMedia:{
-        height: '35vh',
+        height: '45vh',
         backgroundSize: 'cover',
       },
       cardContent: {
-        padding: '1rem .5rem 1rem .5rem',
+        padding: '1rem 2rem 1rem 2rem',
         display: 'flex',
         flexDirection: 'column'
       },
       typographyHeader: {
-        color: 'rgba(69, 72, 77, 1)',
-        fontSize: '1rem',
+        color: 'rgba(69, 72, 77, .78)',
+        fontSize: '1.4rem',
         textAlign: 'center',
-        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
-        fontWeight: '400',
+        // fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        fontWeight: '200',
         lineHeight: '2.66',
         letterSpacing: '0.08333em',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        [theme.breakpoints.down('sm')]:{
+          fontSize: '1.1rem',
+        },
+      },
+      typographyDescription: {
+        color: 'rgba(69, 72, 77, .78)',
+        fontSize: '.9rem',
+        textAlign: 'center',
+        // fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        fontWeight: '100',
+        lineHeight: '1.66',
+        letterSpacing: '0.08333em',
+        textTransform: 'normal'
       },
       typographyCaption: {
         color: 'rgba(69, 72, 77, 1)',
@@ -62,8 +75,11 @@ export default function CardX(props) {
                       title={props.title}
                   />
                   <CardContent className={classes.cardContent}>
-                      <Typography gutterBottom variant="h1" className={classes.typographyHeader}>
+                      <Typography gutterBottom variant="h2" className={classes.typographyHeader}>
                           {props.title}
+                      </Typography>
+                      <Typography gutterBottom variant="paragraph" className={classes.typographyDescription}>
+                          {props.description}
                       </Typography>
                   </CardContent>
               </CardActionArea>
@@ -84,6 +100,9 @@ export default function CardX(props) {
                     <Typography gutterBottom variant="h1" className={classes.typographyHeader}>
                         {props.title}
                     </Typography>
+                      <Typography gutterBottom variant="paragraph" className={classes.typographyDescription}>
+                          {props.description}
+                      </Typography>
                 </CardContent>
             </CardActionArea>
         </Card>

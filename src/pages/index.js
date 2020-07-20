@@ -40,8 +40,8 @@ export default function Index() {
       />
       <CarouselX />
       <MainSubHome>
-        <Brands />
         <Products />
+        <Brands />
       </MainSubHome>
       <Mission />
     </Layout>

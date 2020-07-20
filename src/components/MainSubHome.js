@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
     main: {
         minHeight: '100vh',
         padding: '2rem 8rem',
+        [theme.breakpoints.down('sm')]:{
+            padding: '2rem 2rem',
+        },
     },
     container: {
         padding: "0rem 0rem"

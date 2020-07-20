@@ -19,8 +19,9 @@ const styles = (theme) => ({
         color: '#45484D',
         textTransform: 'uppercase',
         fontSize: '1.4rem',
-        fontWeight: 'bold',
+        fontWeight: '200',
         margin: '.5rem 0rem',
+        letterSpacing: '0.08333em'
     }
 });
 

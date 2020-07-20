@@ -14,7 +14,7 @@ const query = graphql`
                   image {
                     publicURL
                     childImageSharp {
-                        fluid(maxHeight: 500, maxWidth: 500) {
+                        fluid {
                             base64
                             tracedSVG
                             srcWebp
@@ -87,7 +87,7 @@ const selectQueryParamValue = (key) => {
 const ProductListComponent = (props) => {   
   let filter = selectQueryParamValue('productType1')
 
-  let pageTitle = 'Our Products';
+  let pageTitle = 'Featured Products';
   if (filter && filter.length > 0){
       pageTitle = filter;
   }

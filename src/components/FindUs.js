@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
+import Heading from './Heading';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,7 +23,12 @@ const useStyles = makeStyles((theme) => ({
     },
     subtitle2: {
         fontWeight: 'normal',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        letterSpacing: '0.08333em'
+    },
+    content: {
+        fontWeight: 'normal',
+        letterSpacing: '0.08333em'
     }
 }));
 
@@ -38,39 +44,37 @@ export default function FindUs() {
             alignItems="center"
             spacing={3}>
             <Grid item xs={12} sm={6}>
-                <Typography variant="h6" className={classes.header} gutterBottom>
-                    Find Us
-                </Typography>
+                <Heading headerText="Find Us" />
                 <Typography variant="subtitle2" className={classes.subtitle2}>
                     Dawnmax Pvt. Ltd
                 </Typography>
-                {/* <Typography variant="body2">
+                <Typography variant="body2" className={classes.content}>
                     Flat No: 3, First Floor, Plot No.20
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body2" className={classes.content}>
                     3rd Main Rd, Rajalakshmi Nagar
-                </Typography> */}
-                <Typography variant="body2">
+                </Typography>
+                <Typography variant="body2" className={classes.content}>
                     Velachery, Chennai
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body2" className={classes.content}>
                     Tamil Nadu, India 600042
                 </Typography>
-                <Typography variant="subtitle2" className={classes.subtitle2}>
+                <Typography variant="subtitle2" className={classes.content}>
                     Contact No: <strong>+91 98405 44899</strong>
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography variant="subtitle2" className={classes.content}>
                     <a href="https://dawnmax.in">www.dawnmax.in</a>
                 </Typography>
                 <br />
                 <br />
-                <Typography variant="body2">
+                <Typography variant="body2" className={classes.content}>
                     <strong>Open Monday to Saturday</strong>
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body2" className={classes.content}>
                     From 10:00 AM to 6:30 PM or
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body2" className={classes.content}>
                     talk to an expert <strong>+91 98405 44899</strong>
                 </Typography>
             </Grid>

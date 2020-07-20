@@ -14,6 +14,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    letterSpacing: '0.13333em',
+    fontSize: '1.6rem',
+    fontWeight: 'normal',
+    [theme.breakpoints.down('sm')]:{
+      fontSize: '1.2rem',
+    },
   },
   appbar: {
       backgroundColor: 'rgba(249, 189, 59, .76)',
@@ -33,7 +39,7 @@ export default function TopNav() {
       <AppBar position="absolute" color="default" className={classes.appbar}>
         <Toolbar>
           <Logo />
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h1" className={classes.title}>
             DAWNMAX
           </Typography>
           <TopNavMenu />

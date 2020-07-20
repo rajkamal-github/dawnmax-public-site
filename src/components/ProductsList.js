@@ -13,7 +13,7 @@ const styles = (theme) => ({
         flexGrow: 1,
       },
       header:{
-          padding: '1rem 0rem'
+          padding: '1rem 2rem'
       }
 });
 
@@ -38,11 +38,12 @@ const CardXListComponent = (props) => {
                         if (edge.node.frontmatter['image'])
                         {
                             return (
-                                <Grid item xs={12} sm={6} lg={4} key={index}>
+                                <Grid item xs={12} sm={6} key={index}>
                                     <CardX 
-                                        img={edge.node.frontmatter.image.childImageSharp.fluid.srcWebp}
+                                        img={edge.node.frontmatter.image.childImageSharp.fluid.originalImg}
                                         link={postLink}
                                         title={edge.node.frontmatter.title} 
+                                        description={edge.node.frontmatter.description}
                                         {...edge}
                                     />
                                 </Grid>
@@ -50,11 +51,12 @@ const CardXListComponent = (props) => {
                         }
                         else{
                             return (
-                                <Grid item xs={12} sm={6} lg={4} key={index}>
+                                <Grid item xs={12} sm={6} key={index}>
                                     <CardX 
                                         // img={edge.node.frontmatter.image.publicURL}
                                         link={postLink}
                                         title={edge.node.frontmatter.title} 
+                                        description={edge.node.frontmatter.description}
                                         {...edge}
                                     />
                                 </Grid>

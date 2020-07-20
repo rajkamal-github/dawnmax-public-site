@@ -7,7 +7,7 @@ const styles = (theme) => ({
     root: {
         padding: '8rem 8rem',
         [theme.breakpoints.down('sm')]:{
-            padding: '0.25rem 2rem',
+            padding: '2rem 2rem',
         },
         flexGrow: 1,
         backgroundColor: 'rgba(161, 162, 162, 1)',
@@ -17,24 +17,24 @@ const styles = (theme) => ({
     // },
     missionStatementPaper: {
         backgroundColor: 'rgba(161, 162, 162, 1)',
-        padding: '2rem 0rem',
-        color: '#fff',
-        boxShadow: 'none',
-    },
-    missionStatement: {
-        // fontWeight: 'bold',
-        [theme.breakpoints.down('sm')]:{
-            fontSize: '2.75rem',
-        },
-    },
-    missionStatementDetailPaper:{
-        backgroundColor: 'rgba(161, 162, 162, 1)',
         padding: '2rem 2rem',
         color: '#fff',
         boxShadow: 'none',
+        [theme.breakpoints.down('sm')]:{
+            padding: '2rem 0rem',
+        },
+    },
+    missionStatement: {
+        // fontWeight: 'bold',
+        letterSpacing: '0.0333em',
+        fontSize: '2.8rem',
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '2rem',
+        },
     },
     missionStatementDetail:{
         fontWeight: 'normal',
+        letterSpacing: '0.08333em'
     }
 });
 
@@ -57,7 +57,7 @@ const Mission = (props) => {
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6}>
-                    <Paper className={classes.missionStatementDetailPaper}>
+                    <Paper className={classes.missionStatementPaper}>
                         <Typography variant="h6" gutterBottom className={classes.missionStatementDetail}>
                             Dawnmax is a multi-disciplinary solution provider firm that offers innovative products and solutions. Our firm is led by young and talented professionals with experience in a wide range of building products and services.
                         </Typography>
