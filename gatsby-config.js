@@ -61,8 +61,7 @@ module.exports = {
         name: 'images',
         path: `${__dirname}/src/images/`,
       },
-    },  
-    `gatsby-plugin-feed`,
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
