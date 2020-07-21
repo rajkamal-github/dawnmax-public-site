@@ -78,7 +78,7 @@ export default function CardX(props) {
                       <Typography gutterBottom variant="h2" className={classes.typographyHeader}>
                           {props.title}
                       </Typography>
-                      <Typography gutterBottom variant="paragraph" className={classes.typographyDescription}>
+                      <Typography gutterBottom variant="body2" className={classes.typographyDescription}>
                           {props.description}
                       </Typography>
                   </CardContent>
@@ -100,7 +100,7 @@ export default function CardX(props) {
                     <Typography gutterBottom variant="h1" className={classes.typographyHeader}>
                         {props.title}
                     </Typography>
-                      <Typography gutterBottom variant="paragraph" className={classes.typographyDescription}>
+                      <Typography gutterBottom variant="body2" className={classes.typographyDescription}>
                           {props.description}
                       </Typography>
                 </CardContent>

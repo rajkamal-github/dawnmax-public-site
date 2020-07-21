@@ -5,6 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import { graphql, StaticQuery } from "gatsby";
+// import AlertX from './AlertX';
 import OverlayX from './OverlayX';
 
 
@@ -22,30 +23,6 @@ const useStyles = makeStyles((theme) => ({
 
 const CarouselComponent = (props) => {
     const classes = useStyles();
-    // console.log(props);
-
-    let overlayContent = [
-      {
-        header: 'TOSTEM PRE-ENGINEERED WINDOWS',
-        detail: 'The Next Evolution in Window Design'
-      },
-      {
-        header: 'TOSTEM GRANTS',
-        detail: 'Discover collection in our featured products'
-      },
-      {
-        header: 'Lixil Tostem Minimalistic Design',
-        detail: 'Extreme simplicity gives distinctive appearance'
-      },
-      {
-        header: 'ENOX Glass Architecture',
-        detail: 'Elegant and Reliable Glass Architectural Hardware'
-      },
-      {
-        header: 'Imperio Railing System',
-        detail: 'High quality, unique, extravagant Railing Systems'
-      }
-    ];
  
     return (
         <Carousel className={classes.root} 
@@ -56,7 +33,6 @@ const CarouselComponent = (props) => {
           >
             {
                 props.data.allFile.nodes.map( (element, index) => {
-                    // let overlayAd = overlayContent[index];
                     return (
                         <Card className={classes.root} key={index}>
                             <CardActionArea>
@@ -65,6 +41,7 @@ const CarouselComponent = (props) => {
                                   image={element.childImageSharp.fluid.originalImg}
                                   title={element.name}
                                 />
+                                {/* <AlertX /> */}
                                 <OverlayX index={index} />
                             </CardActionArea>
                         </Card>

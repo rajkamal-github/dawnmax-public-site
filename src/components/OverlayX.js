@@ -4,35 +4,54 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     overlay: {
       position: 'absolute',
-      top: '20vh',
-      left: '10vh',
-      width: '40vw',
+      top: '50vh',
+      left: '3vh',
+    //   width: '40vw',
       // height: '40vh',
       borderRadius: '.5rem',
       // color: '#45484D',
       // backgroundColor: 'rgba(249, 189, 59, .76)',
       color: 'rgba(249, 189, 59, .76)',
       backgroundColor: 'rgba(69,72,77, .78)',
-      padding: '2rem 4rem',
-      [theme.breakpoints.down('sm')]:{
-          display: 'none',
+      padding: '2rem 2rem',
+      [theme.breakpoints.down('md')]:{          
+        padding: '1rem 1rem',
+        width: 'auto',
+      },
+      [theme.breakpoints.down('xs')]:{
+        padding: '.5rem .5rem',
+        width: '90vw',
       },
     },
     overlayHeader: {
       padding: '1rem 0rem',
-      fontSize: '2.6rem',
+      fontSize: '2rem',
       letterSpacing: '0.08333em',
       // textTransform: 'uppercase',
       fontWeight: '800',
       lineHeight: '1.6',
       textTransform: 'uppercase',
+      [theme.breakpoints.down('md')]:{
+        fontSize: '1.3rem',
+        padding: '.5rem 0rem',
+      },
+      [theme.breakpoints.down('xs')]:{
+        fontSize: '1rem',
+        padding: '.5rem 0rem',
+      },
     },
     overlayDetail: {
-      fontSize: '1.6rem',
+      fontSize: '1.3rem',
       letterSpacing: '0.08333em',
       // textTransform: 'uppercase',
       fontWeight: '400',
-      lineHeight: '1.6'
+      lineHeight: '1.6',
+      [theme.breakpoints.down('md')]:{ 
+        fontSize: '1rem',
+      },
+      [theme.breakpoints.down('xs')]:{
+        fontSize: '.7rem',
+      },
     }
 }));
 

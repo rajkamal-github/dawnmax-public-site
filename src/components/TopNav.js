@@ -11,6 +11,7 @@ import TopNavMenu from './TopNavMenu';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    maxHeight: '15vh'
   },
   title: {
     flexGrow: 1,
