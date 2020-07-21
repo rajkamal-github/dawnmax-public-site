@@ -5,6 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import { graphql, StaticQuery } from "gatsby";
+import OverlayX from './OverlayX';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,38 +18,6 @@ const useStyles = makeStyles((theme) => ({
         objectFit: 'none',
         objectPosition: '50% 50%'
     },
-    overlay: {
-      position: 'absolute',
-      top: '20vh',
-      left: '10vh',
-      width: '40vw',
-      // height: '40vh',
-      borderRadius: '.5rem',
-      // color: '#45484D',
-      // backgroundColor: 'rgba(249, 189, 59, .76)',
-      color: 'rgba(249, 189, 59, .76)',
-      backgroundColor: 'rgba(69,72,77, .78)',
-      padding: '2rem 4rem',
-      [theme.breakpoints.down('sm')]:{
-          display: 'none',
-      },
-    },
-    overlayHeader: {
-      padding: '1rem 0rem',
-      fontSize: '2.6rem',
-      letterSpacing: '0.08333em',
-      // textTransform: 'uppercase',
-      fontWeight: '800',
-      lineHeight: '1.6',
-      textTransform: 'uppercase',
-    },
-    overlayDetail: {
-      fontSize: '1.6rem',
-      letterSpacing: '0.08333em',
-      // textTransform: 'uppercase',
-      fontWeight: '400',
-      lineHeight: '1.6'
-    }
 }));
 
 const CarouselComponent = (props) => {
@@ -87,7 +56,7 @@ const CarouselComponent = (props) => {
           >
             {
                 props.data.allFile.nodes.map( (element, index) => {
-                    let overlayAd = overlayContent[index];
+                    // let overlayAd = overlayContent[index];
                     return (
                         <Card className={classes.root} key={index}>
                             <CardActionArea>
@@ -96,14 +65,7 @@ const CarouselComponent = (props) => {
                                   image={element.childImageSharp.fluid.originalImg}
                                   title={element.name}
                                 />
-                                <div className={classes.overlay}>
-                                  <div className={classes.overlayHeader}>
-                                    {overlayAd.header}
-                                  </div>
-                                  <div className={classes.overlayDetail}>
-                                    {overlayAd.detail}
-                                  </div>
-                             </div>
+                                <OverlayX index={index} />
                             </CardActionArea>
                         </Card>
                     )
