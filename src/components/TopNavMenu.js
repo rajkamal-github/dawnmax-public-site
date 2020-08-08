@@ -23,7 +23,7 @@ const useStyles = (theme) => ({
         margin: '.5rem .5rem',
         color: '#45484D',
         letterSpacing: '0.08333em',
-        fontWeight: '200',
+        fontWeight: '500',
       },
       buttonHover:{
           backgroundColor: '#45484D',
@@ -40,7 +40,7 @@ const useStyles = (theme) => ({
       },
       menuLinkItem: {
         letterSpacing: '0.08333em',
-        fontWeight: '200',
+        fontWeight: '500',
         textTransform: 'uppercase',
         lineHeight: '2'
       },
