@@ -46,7 +46,7 @@ export default function FindUs() {
             <Grid item xs={12} sm={6}>
                 <Heading headerText="Find Us" />
                 <Typography variant="subtitle2" className={classes.subtitle2}>
-                    Dawnmax Pvt. Ltd
+                    Dawnmax Build Tech. Pvt. Ltd
                 </Typography>
                 <Typography variant="body2" className={classes.content}>
                     Flat No: 3, First Floor, Plot No.20
@@ -65,6 +65,9 @@ export default function FindUs() {
                 </Typography>
                 <Typography variant="subtitle2" className={classes.content}>
                     <a href="https://dawnmax.in">www.dawnmax.in</a>
+                </Typography>
+                <Typography variant="subtitle2" className={classes.content}>
+                    Email: <a href="mailto:info.dawnmax@gmail.com">info.dawnmax@gmail.com</a>
                 </Typography>
                 <br />
                 <br />

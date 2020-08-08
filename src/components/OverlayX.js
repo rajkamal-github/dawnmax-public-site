@@ -60,18 +60,18 @@ const OverlayX = (props) => {
     const classes = useStyles();
 
     let overlayContent = [
-        {
-          header: 'TOSTEM PRE-ENGINEERED WINDOWS',
-          detail: 'The Next Evolution in Window Design'
-        },
+        // {
+        //   header: 'TOSTEM PRE-ENGINEERED WINDOWS',
+        //   detail: 'The Next Evolution in Window Design'
+        // },
         {
           header: 'TOSTEM GRANTS',
           detail: 'Discover collection in our featured products'
         },
-        {
-          header: 'Lixil Tostem Minimalistic Design',
-          detail: 'Extreme simplicity gives distinctive appearance'
-        },
+        // {
+        //   header: 'Lixil Tostem Minimalistic Design',
+        //   detail: 'Extreme simplicity gives distinctive appearance'
+        // },
         {
           header: 'ENOX Glass Architecture',
           detail: 'Elegant and Reliable Glass Architectural Hardware'
