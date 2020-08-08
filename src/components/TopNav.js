@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     letterSpacing: '0.0153333em',
     fontSize: '1.6rem',
-    fontWeight: '800',
+    fontWeight: '600',
     [theme.breakpoints.down('sm')]:{
       fontSize: '1.2rem',
     },
