@@ -40,7 +40,7 @@ export default function FindUs() {
         <Grid 
             container
             direction="row"
-            justify="space-between"
+            justifyContent="space-between"
             alignItems="center"
             spacing={3}>
             <Grid item xs={12} sm={6}>

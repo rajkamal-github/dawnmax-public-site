@@ -46,7 +46,7 @@ const Mission = (props) => {
             <Grid
                 container
                 direction="row"
-                justify="space-evenly"
+                justifyContent="space-evenly"
                 alignItems="center"
             >
                 <Grid item xs={12} sm={12} md={6}>

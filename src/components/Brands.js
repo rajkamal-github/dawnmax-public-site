@@ -42,7 +42,7 @@ const BrandsComponent = (props) => {
             <Grid
                 container
                 direction="row"
-                justify="space-evenly"
+                justifyContent="space-evenly"
                 alignItems="center"
             >
                 {tileData.map((d, index) => {

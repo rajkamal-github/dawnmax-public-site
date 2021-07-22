@@ -39,7 +39,7 @@ export default function BottomNav() {
             <Grid 
                 container
                 direction="row"
-                justify="space-between"
+                justifyContent="space-between"
                 alignItems="center"
                 spacing={3}
                 >
